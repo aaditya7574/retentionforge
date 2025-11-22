@@ -1,0 +1,46 @@
+<section class="best-sellers">
+    <h2 class="section-title">Best <span>Sellers</span></h2>
+    <button class="explore-more">Explore More</button>
+
+    <div class="products-grid">
+        <div class="product-card" *ngFor="let product of bestSellers; let i = index" routerLink="/product-view">
+            <span class="discount-badge" [style.background-color]="product.discountColor">
+                {{ product.discount }} OFF
+            </span>
+            <img [src]="product.image" [alt]="product.name" class="product-img">
+
+            <div class="product-info">
+                <div class="rating">
+                    <!-- Full stars -->
+                    <i class="fa-solid fa-star" *ngFor="let star of [].constructor(getFullStars(product.rating))"></i>
+                    <!-- Half star if needed -->
+                    <i class="fa-solid fa-star-half-stroke" *ngIf="hasHalfStar(product.rating)"></i>
+                    <!-- Empty star to make 5 total -->
+                    <i class="fa-regular fa-star"
+                        *ngIf="getFullStars(product.rating) + (hasHalfStar(product.rating) ? 1 : 0) < 5">
+                    </i>
+                    <span>{{ product.rating }} ({{ product.reviews }})</span>
+                </div>
+
+                <h3 class="product-name">{{ product.name }}</h3>
+                <p class="product-type">{{ product.type }}</p>
+
+                <div class="price-cart">
+                    <div>
+                        <span class="price">${{ product.price }}</span>
+                        <span class="old-price">${{ product.oldPrice }}</span>
+                    </div>
+                    <div class="add-to-cart">
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>

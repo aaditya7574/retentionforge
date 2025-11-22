@@ -1,0 +1,147 @@
+<!-- src/app/pages/contact/contact.component.html -->
+<section class="contact-hero">
+    <div class="container">
+        <h1 class="contact-hero__title">Get In Touch</h1>
+        <p class="contact-hero__lead">
+            Ready to transform your post-sale operations? Schedule a complimentary 30-minute consultation to discuss
+            your current challenges, explore which services align with your needs, and determine if there’s a strong fit
+            for working together.
+        </p>
+    </div>
+</section>
+
+<main class="container contact-content">
+    <section class="contact-section">
+        <div class="contact-grid">
+
+            <!-- Left: Intro + What to Expect -->
+            <div class="contact-intro">
+                <h2 class="h2 section-title">
+                    <i class="fa-solid fa-comments"></i> Let's Discuss Your Customer Retention Challenges
+                </h2>
+
+                <div class="expect-list">
+                    <div class="expect-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <div>
+                            <strong>No pressure, no sales pitch</strong>
+                            <p>Just a strategic conversation about your customer retention goals</p>
+                        </div>
+                    </div>
+                    <div class="expect-item">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <div>
+                            <strong>Honest assessment</strong>
+                            <p>Clear discussion of which services would deliver highest impact for your situation</p>
+                        </div>
+                    </div>
+                    <div class="expect-item">
+                        <i class="fa-solid fa-route"></i>
+                        <div>
+                            <strong>Next steps</strong>
+                            <p>If there’s a fit, we’ll discuss timelines, investment, and expected outcomes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direct Contact Card -->
+                <div class="direct-contact card">
+                    <h3 class="h3"><i class="fa-solid fa-envelope"></i> Prefer to reach out directly?</h3>
+                    <p>Email me anytime:</p>
+                    <a href="mailto:ariel@retentionforge.io" class="direct-email">
+                        <i class="fa-solid fa-paper-plane"></i> ariel@retentionforge.io
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Contact Form -->
+            <div class="contact-form-wrapper card">
+                <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" novalidate>
+                    <!-- Honeypot (hidden from users) -->
+                    <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" formControlName="fullName"
+                                [class.error]="submitted && f['fullName'].errors" placeholder="John Doe" />
+                            @if (submitted && f['fullName'].errors) {
+                            <span class="error-msg">Please enter your full name</span>
+                            }
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company Name *</label>
+                            <input type="text" id="company" formControlName="company"
+                                [class.error]="submitted && f['company'].errors" placeholder="Acme Corp" />
+                            @if (submitted && f['company'].errors) {
+                            <span class="error-msg">Company name is required</span>
+                            }
+                        </div>
+
+                        <div class="form-group">
+                            <label for="title">Job Title *</label>
+                            <input type="text" id="title" formControlName="title"
+                                [class.error]="submitted && f['title'].errors" placeholder="VP of Customer Success" />
+                            @if (submitted && f['title'].errors) {
+                            <span class="error-msg">Job title is required</span>
+                            }
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" formControlName="email"
+                                [class.error]="submitted && (f['email'].errors || f['email'].invalid)"
+                                placeholder="john@acme.com" />
+                            @if (submitted && f['email'].errors) {
+                            <span class="error-msg">
+                                {{ f['email'].errors['required'] ? 'Email is required' : 'Please enter a valid email' }}
+                            </span>
+                            }
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" formControlName="phone"
+                                [class.error]="submitted && f['phone'].errors" placeholder="+1 (555) 123-4567" />
+                            @if (submitted && f['phone'].errors) {
+                            <span class="error-msg">Phone number is required</span>
+                            }
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">Brief Message <span class="optional">(optional)</span></label>
+                            <textarea id="message" formControlName="message" rows="5"
+                                placeholder="Tell us about your customer retention challenges or which service interests you most"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-xl" [disabled]="isSubmitting">
+                            @if (isSubmitting) {
+                            <i class="fa-solid fa-spinner fa-spin"></i> Sending...
+                            } @else {
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                            }
+                        </button>
+                    </div>
+
+                    <!-- Success / Error Messages -->
+                    @if (showSuccess) {
+                    <div class="alert success">
+                        <i class="fa-solid fa-check-circle"></i>
+                        Thank you for reaching out! We'll be in touch within 24 business hours to schedule your
+                        consultation.
+                    </div>
+                    }
+                    @if (showError) {
+                    <div class="alert error">
+                        <i class="fa-solid fa-exclamation-triangle"></i>
+                        Something went wrong. Please try again or email ariel@retentionforge.io directly.
+                    </div>
+                    }
+                </form>
+            </div>
+        </div>
+    </section>
+</main>

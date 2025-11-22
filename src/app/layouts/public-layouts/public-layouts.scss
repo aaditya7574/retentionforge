@@ -1,0 +1,16 @@
+app-topbar {
+    position: relative;
+    z-index: 3000 !important;
+}
+
+router-outlet {
+    position: relative;
+    z-index: 1;
+}
+
+body,
+.page-wrapper,
+main,
+.layout {
+    overflow: visible !important;
+}

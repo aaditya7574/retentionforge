@@ -1,0 +1,13 @@
+<section class="featured-brands">
+    <h2 class="section-title">Featured <span>Brands</span></h2>
+
+    <div class="brands-grid">
+        <ng-container *ngFor="let brand of brands; let i = index">
+            <div class="brand-item" [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 80">
+                <img [src]="brand.logo" [alt]="brand.alt" class="brand-logo">
+            </div>
+        </ng-container>
+    </div>
+
+    <p class="more-text">And many more...</p>
+</section>

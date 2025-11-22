@@ -1,0 +1,18 @@
+<!-- In service-detail.page.html – replace the impact grid with this richer version -->
+<section class="service-section bg-light">
+  <h2 class="h2">Why This Matters</h2>
+  <p class="large mb-40">
+    {{ service.whyThisMattersExtended }}
+  </p>
+
+  <div class="impact-grid">
+    @for (item of service.impact; track item.title) {
+      <div class="impact-card card">
+        <h3 class="impact-card__title">{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    }
+  </div>
+</section>
+
+churn-analysis-studies

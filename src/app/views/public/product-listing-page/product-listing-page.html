@@ -1,0 +1,137 @@
+<section class="product-listing">
+    <div class="container">
+
+        <!-- MOBILE FILTER BUTTON -->
+        <!-- <button class="mobile-filter-btn" (click)="toggleMobileFilters()">
+            <i class="fa-solid fa-sliders"></i> Filters
+            <span class="filter-count" *ngIf="activeFiltersCount > 0">{{ activeFiltersCount }}</span>
+        </button> --> 
+
+        <div class="listing-layout" [class.mobile-filters-open]="mobileFiltersOpen" routerLink="/product-view">
+
+            <!-- LEFT SIDEBAR -->
+            <aside class="filters-sidebar">
+                <div class="filters-header">
+                    <h3>Filters</h3>
+
+                    <button class="clear-all" *ngIf="activeFiltersCount > 0" (click)="clearAllFilters()">
+                        Clear All
+                    </button>
+                </div>
+
+                <!-- CATEGORY -->
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label *ngFor="let cat of categories">
+                        <input type="checkbox" [(ngModel)]="cat.checked" (change)="applyFilter()" />
+                        {{ cat.name }} ({{ cat.count }})
+                    </label>
+                </div>
+
+                <!-- BRAND -->
+                <div class="filter-group">
+                    <h4>Brand</h4>
+                    <label *ngFor="let brand of brands">
+                        <input type="checkbox" [(ngModel)]="brand.checked" (change)="applyFilter()" />
+                        {{ brand.name }} ({{ brand.count }})
+                    </label>
+                </div>
+
+                <!-- PRICE RANGE -->
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <div class="price-slider">
+                        <input type="range" min="0" max="200" step="10" [(ngModel)]="priceRange"
+                            (input)="applyFilter()" />
+                        <div class="price-values">
+                            <span>$0</span>
+                            <span>${{ priceRange }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RATING -->
+                <div class="filter-group">
+                    <h4>Customer Rating</h4>
+                    <label>
+                        <input type="radio" name="rating" value="0" [(ngModel)]="minRating" (change)="applyFilter()" />
+                        Any Rating
+                    </label>
+                </div>
+
+                <!-- DISCOUNT -->
+                <div class="filter-group">
+                    <h4>Discount</h4>
+                    <label *ngFor="let disc of discounts">
+                        <input type="checkbox" [(ngModel)]="disc.checked" (change)="applyFilter()" />
+                        {{ disc.label }}
+                    </label>
+                </div>
+            </aside>
+
+            <!-- RIGHT PRODUCTS -->
+            <div class="products-section">
+                <div class="section-header">
+                    <h2>All Products <span>({{ filteredProducts.length }})</span></h2>
+
+                    <select class="sort-select" [(ngModel)]="sortBy" (change)="applyFilter()">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="discount">Biggest Discount</option>
+                    </select>
+                </div>
+
+                <div class="products-grid" *ngIf="filteredProducts.length > 0; else noResults">
+
+                    <div class="product-card" *ngFor="let product of filteredProducts"
+                        [routerLink]="'/product/' + product.id">
+
+                        <span class="discount-badge" *ngIf="product.discount"
+                            [style.background-color]="product.discountColor">
+                            {{ product.discount }} OFF
+                        </span>
+
+                        <img class="product-img" [src]="product.image" [alt]="product.name" />
+
+                        <div class="product-info">
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"
+                                    *ngFor="let s of [].constructor(getFullStars(product.rating))"></i>
+                                <i class="fa-solid fa-star-half-stroke" *ngIf="hasHalfStar(product.rating)"></i>
+
+                                <span>{{ product.rating }} ({{ product.reviews }})</span>
+                            </div>
+
+                            <h3 class="product-name">{{ product.name }}</h3>
+                            <p class="product-type">{{ product.type }}</p>
+
+                            <div class="price-cart">
+                                <div>
+                                    <span class="price">${{ product.price }}</span>
+                                    <span class="old-price" *ngIf="product.oldPrice">${{ product.oldPrice }}</span>
+                                </div>
+
+                                <div class="add-to-cart" (click)="$event.stopPropagation(); addToCart(product)">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <ng-template #noResults>
+                    <div class="no-results">
+                        <i class="fa-solid fa-search"></i>
+                        <p>No products found matching your filters.</p>
+                        <button (click)="clearAllFilters()">Clear Filters</button>
+                    </div>
+                </ng-template>
+
+            </div>
+        </div>
+    </div>
+</section>

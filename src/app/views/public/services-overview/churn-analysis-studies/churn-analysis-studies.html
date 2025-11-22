@@ -1,0 +1,118 @@
+<!-- Breadcrumb
+<nav class="breadcrumb container" aria-label="breadcrumb">
+    <a routerLink="/">Home</a>
+    <a routerLink="/services">Services</a>
+    <span>{{ service.name }}</span>
+</nav> -->
+
+<!-- Hero -->
+<section class="service-hero">
+    <div class="container">
+        <h1 class="service-hero__title">{{ service.name }}</h1>
+        <p class="service-hero__lead">{{ service.shortDescription }}</p>
+    </div>
+</section>
+
+<main class="container service-content">
+
+    <!-- 1. Overview -->
+    <section class="service-section">
+        <h2 class="section-title">
+            <i class="fa-solid fa-binoculars"></i> Overview
+        </h2>
+        <p class="service-overview-text">{{ service.overview }}</p>
+    </section>
+
+    <!-- 2. Deliverables -->
+    <section class="service-section">
+        <h2 class="section-title">
+            <i class="fa-solid fa-gift"></i> What This Service Delivers
+        </h2>
+        <ul class="deliverables-list">
+            @for (item of service.deliverables; track item) {
+            <li class="deliverable-item">
+                <i class="fa-solid fa-check-circle deliverable-icon"></i>
+                <span class="deliverable-text">{{ item }}</span>
+            </li>
+            }
+        </ul>
+    </section>
+
+    <!-- 3. Why This Matters -->
+    <section class="service-section">
+        <h2 class="section-title">
+            <i class="fa-solid fa-chart-line"></i> Why This Matters
+        </h2>
+        <div class="why-matters-text" [innerHTML]="service.whyThisMattersExtended"></div>
+
+        <div class="impact-grid">
+            @for (item of service.impact; track item.title) {
+            <div class="impact-card card">
+                <i class="fa-solid fa-rocket impact-icon"></i>
+                <h3 class="impact-title">{{ item.title }}</h3>
+                <p class="impact-desc">{{ item.description }}</p>
+            </div>
+            }
+        </div>
+    </section>
+
+    <!-- 4. Typical Engagement -->
+    <section class="service-section">
+        <h2 class="section-title">
+            <i class="fa-solid fa-calendar-check"></i> Typical Engagement
+        </h2>
+        <div class="engagement-grid">
+            <div class="engagement-card card">
+                <i class="fa-solid fa-clock engagement-icon"></i>
+                <div class="engagement-label">Duration</div>
+                <div class="engagement-value">{{ service.engagement.duration }}</div>
+            </div>
+            <div class="engagement-card card">
+                <i class="fa-solid fa-laptop-house engagement-icon"></i>
+                <div class="engagement-label">Format</div>
+                <div class="engagement-value">{{ service.engagement.format }}</div>
+            </div>
+            <div class="engagement-card card">
+                <i class="fa-solid fa-users engagement-icon"></i>
+                <div class="engagement-label">Your Team’s Involvement</div>
+                <div class="engagement-value">{{ service.engagement.involvement }}</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Ideal For -->
+    <section class="service-section">
+        <h2 class="section-title">
+            <i class="fa-solid fa-bullseye"></i> This Service Is Ideal For
+        </h2>
+        <ul class="ideal-list">
+            @for (item of service.idealFor; track item) {
+            <li class="ideal-item">
+                <i class="fa-solid fa-target ideal-icon"></i>
+                {{ item }}
+            </li>
+            }
+        </ul>
+    </section>
+
+</main>
+<section class="final-cta">
+    <div class="container final-cta__container">
+        <div class="final-cta__content">
+            <h2 class="final-cta__heading">
+                Ready to get started with<br aria-hidden="true"> {{service.name}}?
+            </h2>
+
+            <p class="final-cta__body">
+                Let’s turn your retention challenges into predictable, profitable growth.
+            </p>
+
+            <div class="final-cta__actions">
+                <a routerLink="/contact" fragment="consultation-form" class="btn btn-primary btn-large">
+                    Schedule Your Consultation
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>

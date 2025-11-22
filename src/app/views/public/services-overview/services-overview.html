@@ -1,0 +1,39 @@
+<section class="services section bg-white">
+    <div class="container">
+        <header class="services__header text-center">
+            <h2 class="h2">Comprehensive Customer Retention Solutions</h2>
+            <p class="services__subheading">
+                From strategy to execution, RetentionForge delivers specialized consulting services
+                designed to transform your post-sale operations into revenue-generating engines.
+            </p>
+        </header>
+
+        <div class="services__grid">
+            @for (service of services; track service.id) {
+            <a [routerLink]="['/services/'+  service.slug]" class="service-card card"
+                [attr.aria-label]="'Learn more about ' + service.name">
+                <div class="service-card__number">{{ service.id }}</div>
+                <h3 class="service-card__title">{{ service.name }}</h3>
+                <p class="service-card__desc">{{ service.description }}</p>
+                <span class="service-card__link">
+                    Learn more
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+            </a>
+            }
+        </div>
+
+        <!-- CTA Section -->
+        <div class="services__cta">
+            <p class="services__cta-text">
+                Not sure which service fits your needs? <strong>Let's talk.</strong>
+            </p>
+            <a routerLink="/contact" fragment="consultation-form" class="btn btn-primary">
+                Schedule Consultation
+            </a>
+        </div>
+    </div>
+</section>
