@@ -106,3 +106,24 @@
         display: none;
     }
 }
+
+// Responsive
+@media screen and (max-width: 499px) {
+    // .hero__headline {
+    //     // font-size: 2rem;
+    //     font-size: clamp(2.0rem, 10vw, 2rem);
+    // }
+
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 575px) {}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {}
+
+@media screen and (min-width: 768px) {}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}

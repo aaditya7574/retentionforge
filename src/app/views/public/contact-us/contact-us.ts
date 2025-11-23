@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './contact-us.html',
   styleUrl: './contact-us.scss',
 })
-export class ContactUs {
+export class ContactUs implements OnInit {
   contactForm: FormGroup;
   submitted = false;
   isSubmitting = false;
@@ -27,6 +27,10 @@ export class ContactUs {
       message: [''],
       website: [''] // honeypot
     });
+  }
+
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
 
   get f() { return this.contactForm.controls; }

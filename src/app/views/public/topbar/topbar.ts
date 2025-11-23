@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, inject, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { ThemeService } from '../../../utils/theme/theme-service';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterModule } from "@angular/router";
@@ -13,10 +13,12 @@ import { filter } from 'rxjs/operators';
   templateUrl: './topbar.html',
   styleUrl: './topbar.scss',
 })
-export class Topbar {
+export class Topbar  {
   isScrolled = false;
   isMobileMenuOpen = false;
   mobileServicesOpen = false;
+  isShowDesktopMenu = false;
+  constructor(private router: Router) { }
 
   @HostListener('window:scroll')
   onScroll() {
@@ -35,5 +37,12 @@ export class Topbar {
   closeMenu() {
     this.isMobileMenuOpen = false;
     this.mobileServicesOpen = false;
+    this.isShowDesktopMenu = false;
+    
+  }
+
+  isServicesPageActive(): boolean {
+    const currentUrl = this.router.url;
+    return currentUrl.startsWith('/services/');
   }
 }

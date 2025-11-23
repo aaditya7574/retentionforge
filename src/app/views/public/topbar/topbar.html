@@ -8,10 +8,10 @@
         </a>
 
         <!-- Desktop Navigation – Clean & Spacious -->
-        <nav class="header-nav" aria-label="Main navigation">
+        <nav class="header-nav desktop-menu" aria-label="Main navigation">
             <ul class="nav-list">
                 <li>
-                    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <a routerLink="/welcome" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                         <i class="fa-solid fa-house"></i> Home
                     </a>
                 </li>
@@ -24,25 +24,32 @@
 
                 <!-- Services – Mega-style on hover (no dropdown arrow clutter) -->
                 <li class="nav-item-services">
-                    <a href="javascript:void(0)" class="nav-link-services">
+                    <a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }"
+                        class="nav-link-services" (mouseenter)="isShowDesktopMenu = true;" (click)="isShowDesktopMenu = false;">
+
                         <i class="fa-solid fa-layer-group"></i>
                         Services
                         <i class="fa-solid fa-chevron-down"></i>
                     </a>
 
                     <!-- Mega Dropdown -->
-                    <div class="services-megamenu">
+                    <div class="services-megamenu" (mouseleave)="isShowDesktopMenu = false;" *ngIf="isShowDesktopMenu">
                         <div class="megamenu-grid">
                             <div class="megamenu-column">
                                 <h4><i class="fa-solid fa-chart-line"></i> Core Retention Services</h4>
                                 <ul>
-                                    <li><a routerLink="/services/churn-analysis" (click)="closeMenu()">Churn Analysis &
+                                    <li><a routerLink="/services/churn-analysis" (click)="closeMenu()"
+                                            routerLinkActive="active-submenu"
+                                            [routerLinkActiveOptions]="{ exact: false }">Churn Analysis &
                                             Retention Studies</a></li>
-                                    <li><a routerLink="/services/cs-department" (click)="closeMenu()">CS Department
+                                    <li><a routerLink="/services/customer-success-department-design-build"
+                                            routerLinkActive="active-submenu" (click)="closeMenu()">CS Department
                                             Design & Build</a></li>
-                                    <li><a routerLink="/services/revenue-retention" (click)="closeMenu()">Revenue
+                                    <li><a routerLink="/services/revenue-retention-strategy-optimization"
+                                            routerLinkActive="active-submenu" (click)="closeMenu()">Revenue
                                             Retention Strategy</a></li>
-                                    <li><a routerLink="/services/health-scoring" (click)="closeMenu()">Customer Health
+                                    <li><a routerLink="/services/customer-health-scoring-system-development"
+                                            routerLinkActive="active-submenu" (click)="closeMenu()">Customer Health
                                             Scoring</a></li>
                                 </ul>
                             </div>
@@ -51,23 +58,32 @@
                                 <h4><i class="fa-solid fa-person-arrow-up-from-line"></i> Growth & Expansion</h4>
 
                                 <ul>
-                                    <li><a routerLink="/services/account-management" (click)="closeMenu()">Account
+                                    <li><a routerLink="/services/account-management-expansion-strategy"
+                                            routerLinkActive="active-submenu" (click)="closeMenu()">Account
                                             Management & Expansion</a></li>
-                                    <li><a routerLink="/services/onboarding" (click)="closeMenu()">Onboarding
+                                    <li><a routerLink="/services/onboarding-implementation-optimization"
+                                            routerLinkActive="active-submenu" (click)="closeMenu()">Onboarding
                                             Optimization</a></li>
-                                    <li><a routerLink="/services/professional-services"
-                                            (click)="closeMenu()">Professional Services Revenue</a></li>
+                                    <li><a routerLink="/services/professional-services-revenue-optimization"
+                                            routerLinkActive="active-submenu" (click)="closeMenu()">Professional
+                                            Services Revenue</a></li>
                                 </ul>
                             </div>
 
                             <div class="megamenu-column">
                                 <h4><i class="fa-solid fa-users-gear"></i> Leadership & Systems</h4>
                                 <ul>
-                                    <li><a routerLink="/services/org-design" (click)="closeMenu()">Post-Sale Org
+                                    <li><a routerLink="/services/organizational-design-for-post-sale-teams"
+                                            routerLinkActive="active-submenu" (click)="closeMenu()">Post-Sale Org
                                             Design</a></li>
-                                    <li><a routerLink="/services/kpi-framework" (click)="closeMenu()">KPI & Metrics
+                                    <li><a routerLinkActive="active-submenu"
+                                            routerLink="/services/KPI-framework-metrics-design"
+                                            (click)="closeMenu()">KPI
+                                            & Metrics
                                             Framework</a></li>
-                                    <li><a routerLink="/services/coaching" (click)="closeMenu()">Executive CS
+                                    <li><a routerLinkActive="active-submenu"
+                                            routerLink="/services/executive-coaching-for-customer-success-leaders"
+                                            (click)="closeMenu()">Executive CS
                                             Coaching</a></li>
                                 </ul>
                             </div>
@@ -76,7 +92,8 @@
                         <!-- Mini CTA inside megamenu -->
                         <div class="megamenu-cta">
                             <p><i class="fa-solid fa-headset"></i> Not sure where to start?</p>
-                            <a routerLink="/contact" class="btn btn-primary btn-small">Book a Free Consultation</a>
+                            <button class="btn btn-primary btn-small" (click)="isShowDesktopMenu = false;" routerLink="/contact">Book a Free
+                                Consultation</button>
                         </div>
                     </div>
                 </li>
@@ -102,38 +119,72 @@
         <button class="mobile-toggle" (click)="toggleMobileMenu()" [attr.aria-expanded]="isMobileMenuOpen">
             <span></span><span></span><span></span>
         </button>
+
     </div>
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" [class.open]="isMobileMenuOpen" (click)="closeMenu()"></div>
     <nav class="mobile-menu" [class.open]="isMobileMenuOpen">
         <div class="mobile-menu-header">
-            <a routerLink="/" class="mobile-logo" (click)="closeMenu()">RetentionForge</a>
-            <button class="mobile-close" (click)="closeMenu()">Close</button>
+            <a routerLink="/welcome" class="mobile-logo" (click)="closeMenu()">RetentionForge</a>
+            <!-- Close icon (×) -->
+            <button class="mobile-close" (click)="closeMenu()" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
         </div>
+
         <ul class="mobile-nav-list">
-            <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
-            <li><a routerLink="/about" (click)="closeMenu()">About</a></li>
             <li>
-                <a href="javascript:void(0)" (click)="toggleMobileServices()">
+                <a routerLink="/welcome" routerLinkActive="active-submenu" [routerLinkActiveOptions]="{exact: true}"
+                    (click)="closeMenu()">Home</a>
+            </li>
+            <li>
+                <a routerLink="/about" routerLinkActive="active-submenu" (click)="closeMenu()">About</a>
+            </li>
+
+            <!-- Services Parent + Dropdown -->
+            <li>
+                <a href="javascript:void(0)" class="services-toggle" (click)="toggleMobileServices()"
+                    [class.active]="isServicesPageActive()">
                     Services
-                    <i class="fa-solid fa-chevron-down" [class.rotate]="mobileServicesOpen"></i>
+                    <i class="fa-solid fa-chevron-down" [class.rotate-180]="mobileServicesOpen"></i>
                 </a>
+
                 <ul class="mobile-services-list" [class.open]="mobileServicesOpen">
-                    <li><a routerLink="/services/churn-analysis" (click)="closeMenu()">Churn Analysis</a></li>
-                    <li><a routerLink="/services/cs-department" (click)="closeMenu()">CS Department Build</a></li>
-                    <li><a routerLink="/services/revenue-retention" (click)="closeMenu()">Revenue Retention</a></li>
-                    <li><a routerLink="/services/health-scoring" (click)="closeMenu()">Health Scoring</a></li>
-                    <li><a routerLink="/services/account-management" (click)="closeMenu()">Account Expansion</a></li>
-                    <li><a routerLink="/services/onboarding" (click)="closeMenu()">Onboarding</a></li>
-                    <li><a routerLink="/services/org-design" (click)="closeMenu()">Org Design</a></li>
-                    <li><a routerLink="/services/coaching" (click)="closeMenu()">Executive Coaching</a></li>
+                    <li><a routerLink="/services/churn-analysis" routerLinkActive="active-submenu" (click)="closeMenu()">Churn
+                            Analysis</a></li>
+                    <li><a routerLink="/services/customer-success-department-design-build" routerLinkActive="active-submenu" (click)="closeMenu()">CS
+                            Department Build</a></li>
+                    <li><a routerLink="/services/revenue-retention-strategy-optimization" routerLinkActive="active-submenu"
+                            (click)="closeMenu()">Revenue Retention</a></li>
+                    <li><a routerLink="/services/customer-health-scoring-system-development" routerLinkActive="active-submenu"
+                            (click)="closeMenu()">Customer Health Scoring</a></li>
+                    <li><a routerLink="/services/account-management-expansion-strategy" routerLinkActive="active-submenu"
+                            (click)="closeMenu()">Account Expansion</a></li>
+                    <li><a routerLink="/services/onboarding-implementation-optimization" routerLinkActive="active-submenu" (click)="closeMenu()">Onboarding
+                            Optimization</a></li>
+                    <li><a routerLink="/services/professional-services-revenue-optimization" routerLinkActive="active-submenu"
+                            (click)="closeMenu()">Professional Services</a></li>
+                    <li><a routerLink="/services/organizational-design-for-post-sale-teams" routerLinkActive="active-submenu" (click)="closeMenu()">Org
+                            Design</a></li>
+                    <li><a routerLink="/services/KPI-framework-metrics-design" routerLinkActive="active-submenu" (click)="closeMenu()">KPI
+                            Framework</a></li>
+                    <li><a routerLink="/services/executive-coaching-for-customer-success-leaders" routerLinkActive="active-submenu" (click)="closeMenu()">Executive
+                            Coaching</a></li>
                 </ul>
             </li>
-            <li><a routerLink="/contact" (click)="closeMenu()">Contact</a></li>
-            <li class="mobile-cta">
-                <a routerLink="/contact" class="btn btn-primary btn-block">
-                    <i class="fa-solid fa-calendar-plus"></i> Schedule Consultation
+
+            <li>
+                <a routerLink="/contact" routerLinkActive="active-submenu" (click)="closeMenu()">Contact</a>
+            </li>
+
+            <!-- CTA -->
+            <li class="mobile-cta" (click)="closeMenu()">
+                <a routerLink="/contact" class="btn btn-primary d-flex justify-content-center text-white">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>
+                        Schedule Consultation
+                    </span>
                 </a>
             </li>
         </ul>

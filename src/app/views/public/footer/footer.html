@@ -1,23 +1,26 @@
-<footer class="footer-light">
+<footer class="footer-modern">
     <div class="container-fluid px-5">
 
         <div class="footer-grid">
 
-            <!-- Brand -->
+            <!-- Brand & Social -->
             <div class="footer-brand">
                 <a routerLink="/" class="footer-logo">
-                    <img src="/assets/logo.svg" alt="RetentionForge Logo" width="180">
+                    <img src="/assets/logo.svg" alt="RetentionForge Logo" width="180" height="40">
                 </a>
                 <p class="footer-tagline">
                     Turning post-sale operations into predictable, profitable growth engines for SaaS companies.
                 </p>
-
                 <div class="footer-social">
-                    <a href="https://linkedin.com/company/retentionforge" target="_blank"><i
-                            class="fa-brands fa-linkedin-in text-accent"></i></a>
-                    <a href="https://twitter.com/retentionforge" target="_blank"><i
-                            class="fa-brands fa-twitter text-accent"></i></a>
-                    <a href="mailto:ariel@retentionforge.io"><i class="fa-solid fa-envelope text-accent"></i></a>
+                    <a href="https://linkedin.com/company/retentionforge" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://twitter.com/retentionforge" target="_blank" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="mailto:ariel@retentionforge.io" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
                 </div>
             </div>
 
@@ -32,50 +35,78 @@
                 </ul>
             </div>
 
-            <!-- Services -->
-            <div class="footer-links">
-                <h4>Key Services</h4>
-                <ul>
-                    <li><a routerLink="/services/churn-analysis">Churn Analysis</a></li>
-                    <li><a routerLink="/services/cs-department-build">CS Dept. Design</a></li>
-                    <li><a routerLink="/services/retention-playbooks">Retention Playbooks</a></li>
-                    <li><a routerLink="/services/health-scoring">Health Scoring</a></li>
-                </ul>
-            </div>
-
-            <!-- CTA -->
-            <div class="footer-cta">
-                <h4 class="footer-cta__title">
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    Reduce Churn Faster
-                </h4>
-
-                <p class="footer-cta__subtitle">
-                    Book a free 30-minute consultation and get real insights tailored to your SaaS.
-                </p>
-
-                <a routerLink="/contact" fragment="consultation-form" class="btn btn-primary w-100 footer-cta__button">
-                    <i class="fa-solid fa-calendar-plus"></i> Schedule Consultation
-                </a>
-
-                <div class="footer-contact">
-                    <p><strong>Email:</strong></p>
-                    <a href="mailto:ariel@retentionforge.io" class="footer-email">
-                        <i class="fa-solid fa-paper-plane"></i> ariel@retentionforge.io
-                    </a>
+            <!-- Our Expertise (2-column on large, 1-col on small) -->
+            <div class="footer-expertise">
+                <h4>Our Expertise</h4>
+                <div class="expertise-columns">
+                    <ul>
+                        <li><a routerLink="/services/churn-analysis">Churn Analysis & Retention Studies</a></li>
+                        <li><a routerLink="/services/customer-success-department-design-build">Customer Success Department Build</a></li>
+                        <li><a routerLink="/services/revenue-retention-strategy-optimization">Revenue Retention Optimization</a>
+                        </li>
+                        <li><a routerLink="/services/professional-services-revenue-optimization">Professional Services Revenue</a>
+                        </li>
+                        <li><a routerLink="/services/customer-health-scoring-system-development">Customer Health Scoring Systems</a></li>
+                    </ul>
+                    <ul>
+                        <li><a routerLink="/services/account-management-expansion-strategy">Account Management & Expansion</a></li>
+                        <li><a routerLink="/services/organizational-design-for-post-sale-teams">Post-Sale Org Design</a></li>
+                        <li><a routerLink="/services/onboarding-implementation-optimization">Onboarding Optimization</a></li>
+                        <li><a routerLink="/services/executive-coaching-for-customer-success-leaders">Executive CS Coaching</a></li>
+                        <li><a routerLink="/services/KPI-framework-metrics-design">KPI & Metrics Frameworks</a></li>
+                    </ul>
                 </div>
             </div>
 
+            <!-- CTA - Links -->
+            <div class="footer-links">
+                <h4>Contact US</h4>
+                <p>Book a free 30-minute consultation and get actionable insights tailored to your SaaS business.</p>
+
+                <button routerLink="/contact" fragment="consultation-form" class="btn btn-primary schedule-consultation">
+                    <span>
+                        <i class="fa-solid fa-calendar-plus"></i> 
+                        Schedule Free Consultation
+                    </span>
+                </button>
+
+                <!-- Horizontal Line -->
+                <hr class="cta-divider">
+
+                <div class="cta-email">
+                    <strong>Email us directly:</strong><br>
+                    <a href="mailto:ariel@retentionforge.io">ariel@retentionforge.io</a>
+                </div>
+            </div>
+
+            <!-- CTA - Prominent on all sizes -->
+            <!-- <div class="footer-cta-card">
+                <div class="cta-content">
+                    <h3><i class="fa-solid fa-handshake-angle"></i> Reduce Churn Faster</h3>
+                    <p>Book a free 30-minute consultation and get actionable insights tailored to your SaaS business.
+                    </p>
+                    <a routerLink="/contact" fragment="consultation-form" class="btn btn-primary">
+                        <i class="fa-solid fa-calendar-plus"></i> Schedule Free Consultation
+                    </a>
+                    <div class="cta-email">
+                        <strong>Email us directly:</strong><br>
+                        <a href="mailto:ariel@retentionforge.io">ariel@retentionforge.io</a>
+                    </div>
+                </div>
+            </div> -->
+
         </div>
 
+        <!-- Bottom Bar -->
         <div class="footer-bottom">
-            <div>© {{ currentYear }} RetentionForge. All rights reserved.</div>
-            <div class="footer-legal">
+            <div class="copyright">
+                © {{ currentYear }} RetentionForge. All rights reserved.
+            </div>
+            <div class="legal-links">
                 <a routerLink="/privacy">Privacy Policy</a>
                 <span>•</span>
                 <a routerLink="/terms">Terms of Service</a>
             </div>
         </div>
-
     </div>
 </footer>

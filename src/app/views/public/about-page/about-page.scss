@@ -1,6 +1,8 @@
 .about-hero {
     padding: 140px 0 80px;
-    background: white;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(33, 128, 141, 0.10) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(230, 129, 97, 0.08) 0%, transparent 65%);
     position: relative;
 
     @media (max-width: 768px) {
@@ -477,10 +479,42 @@
     margin-right: auto;
 }
 
-.about-cta__actions {
-    .btn-large {
-        padding: 18px 48px;
-        font-size: 1.2rem;
-        font-weight: 600;
+.about-cta__actions {}
+
+//Responsive
+@media screen and (max-width: 499px) {
+    .industry-leadership__photo {
+        height: 350px;
+    }
+
+    .about-cta__inner {
+        padding: 16px;
+
+        h2 {
+            font-size: var(--font-size-h3);
+        }
     }
 }
+
+@media screen and (min-width: 500px) and (max-width: 575px) {
+    .industry-leadership__photo {
+        height: 350px;
+    }
+
+    .about-cta__inner {
+        padding: 16px;
+
+        h2 {
+            font-size: var(--font-size-h3);
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {}
+
+@media screen and (min-width: 768px) {}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}

@@ -1,9 +1,5 @@
 .services {
     padding: 60px 0;
-
-    @media (max-width: 768px) {
-        padding: 80px 0;
-    }
 }
 
 .services__header {
@@ -26,7 +22,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 
     @media (max-width: 1024px) {
         grid-template-columns: repeat(2, 1fr);
@@ -125,3 +121,52 @@
         font-size: 1.25rem;
     }
 }
+
+.schedule-consultation {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+
+}
+
+//Responsive
+@media screen and (max-width: 499px) {
+    .services {
+        padding: 0 0;
+    }
+
+    .services__cta {
+        padding: 24px;
+    }
+
+    .schedule-consultation {
+        padding: 10px 16px !important;
+        font-size: 1.1rem !important;
+        margin: auto !important;
+        display: flex !important;
+        justify-content: start !important;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 575px) {
+    .services__cta {
+        padding: 24px;
+    }
+
+    .schedule-consultation {
+        padding: 10px 16px !important;
+        font-size: 1.1rem !important;
+        margin: auto !important;
+        display: flex !important;
+        justify-content: start !important;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {}
+
+@media screen and (min-width: 768px) {}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}

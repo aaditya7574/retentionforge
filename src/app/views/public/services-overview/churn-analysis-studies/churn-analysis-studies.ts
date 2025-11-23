@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-churn-analysis-studies',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './churn-analysis-studies.html',
   styleUrl: './churn-analysis-studies.scss',
 })
-export class ChurnAnalysisStudies {
+export class ChurnAnalysisStudies implements OnInit {
   service = {
     name: 'Churn Analysis & Customer Retention Studies',
     slug: 'churn-analysis',
@@ -50,4 +51,8 @@ export class ChurnAnalysisStudies {
 
 Most companies struggle with churn analysis because they lack the time, objectivity, and expertise to conduct thorough customer interviews. Customers often won’t share honest feedback with their CSM or account manager, but they’ll open up to a neutral third party. Our systematic approach ensures you get the truth — not the polite version.`
   };
+
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 }

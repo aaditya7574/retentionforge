@@ -1,18 +1,42 @@
-<!-- In service-detail.page.html – replace the impact grid with this richer version -->
-<section class="service-section bg-light">
-  <h2 class="h2">Why This Matters</h2>
-  <p class="large mb-40">
-    {{ service.whyThisMattersExtended }}
-  </p>
+<section class="services section bg-white fade-in">
+  <header class="services__header text-center">
+    <h2 class="h1">Comprehensive Customer Retention Solutions</h2>
+    <p class="services__subheading">
+      From strategy to execution, RetentionForge delivers specialized consulting services
+      designed to transform your post-sale operations into revenue-generating engines.
+    </p>
+  </header>
+  <div class="container">
 
-  <div class="impact-grid">
-    @for (item of service.impact; track item.title) {
-      <div class="impact-card card">
-        <h3 class="impact-card__title">{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
-      </div>
-    }
+    <div class="services__grid">
+      @for (service of services; track service.id) {
+      <a [routerLink]="['/services/'+  service.slug]" class="service-card card"
+        [attr.aria-label]="'Learn more about ' + service.name">
+        <div class="service-card__number">{{ service.id }}</div>
+        <h3 class="service-card__title">{{ service.name }}</h3>
+        <p class="service-card__desc">{{ service.description }}</p>
+        <span class="service-card__link">
+          Learn more
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </span>
+      </a>
+      }
+    </div>
+
+    <!-- CTA Section -->
+    <div class="services__cta">
+      <p class="services__cta-text">
+        Not sure which service fits your needs? <strong>Let's talk.</strong>
+      </p>
+      <button routerLink="/contact" fragment="consultation-form" class="btn btn-primary schedule-consultation">
+        <span>
+          <i class="fa-solid fa-headset"></i>
+          Schedule Consultation
+        </span>
+      </button>
+    </div>
   </div>
 </section>
-
-churn-analysis-studies
