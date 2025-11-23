@@ -5,6 +5,18 @@
         radial-gradient(circle at 20% 80%, rgba(33, 128, 141, 0.10) 0%, transparent 60%),
         radial-gradient(circle at 80% 20%, rgba(230, 129, 97, 0.08) 0%, transparent 65%);
 
+    h2 {
+        font-size: 3rem;
+        line-height: 1.2;
+        color: var(--text-primary);
+        font-weight: 700;
+        margin-bottom: 28px;
+
+        @media (max-width: 640px) {
+            font-size: 2.4rem;
+        }
+    }
+
     @media (max-width: 768px) {
         margin-bottom: 56px;
     }
@@ -134,8 +146,18 @@
         padding: 0 0;
     }
 
+    .services__header {
+        padding: 100px 20px 60px 20px;
+        margin-bottom: 50px;
+    }
+
+    .services__grid {
+        margin-bottom: 50px;
+    }
+
     .services__cta {
         padding: 24px;
+        margin-bottom: 50px;
     }
 
     .schedule-consultation {
@@ -149,8 +171,22 @@
 }
 
 @media screen and (min-width: 500px) and (max-width: 575px) {
+    .services {
+        padding: 0 0;
+    }
+
+    .services__header {
+        padding: 100px 20px 60px 20px;
+        margin-bottom: 50px;
+    }
+
+    .services__grid {
+        margin-bottom: 50px;
+    }
+
     .services__cta {
         padding: 24px;
+        margin-bottom: 50px;
     }
 
     .schedule-consultation {
@@ -160,6 +196,7 @@
         display: flex !important;
         justify-content: start !important;
     }
+
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {}
