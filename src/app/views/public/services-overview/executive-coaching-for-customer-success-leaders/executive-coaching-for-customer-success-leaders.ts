@@ -27,8 +27,8 @@ export class ExecutiveCoachingForCustomerSuccessLeaders implements OnInit{
     'Board Presentation Preparation – Review of board materials, narrative coaching, communication refinement, and executive presence development',
     'Career Development Planning – Personalized roadmap covering executive growth, personal branding, and thought leadership opportunities',
     'Playbook Review & Optimization – Expert evaluation of CS strategies, playbooks, and operating models with improvement recommendations',
-    'Peer Network Access – Introductions to a vetted network of CS executives for shared learning and support',
-    'Resource Library – Access to CS frameworks, templates, models, and best practices'
+    // 'Peer Network Access – Introductions to a vetted network of CS executives for shared learning and support',
+    // 'Resource Library – Access to CS frameworks, templates, models, and best practices'
   ],
 
   impact: [

@@ -7,8 +7,8 @@ import { RouterLink } from '@angular/router';
   templateUrl: './custome-success-department.html',
   styleUrl: './custome-success-department.scss',
 })
-export class CustomeSuccessDepartment implements OnInit{
-  service:any = {
+export class CustomeSuccessDepartment implements OnInit {
+  service: any = {
     name: 'Customer Success Department — Design & Build',
     slug: 'cs-department-design-build',
 
@@ -28,17 +28,18 @@ export class CustomeSuccessDepartment implements OnInit{
       '90-Day Implementation Roadmap – Step-by-step execution plan with milestones, timelines, and ownership'
     ],
 
-    whyThisMattersExtended: `Customer Success done wrong is expensive overhead. Customer Success done right is a profit center that pays for itself through improved retention and expansion revenue.
+    whyThisMattersIntro: `Customer Success done wrong is expensive overhead. Customer Success done right is a profit center that pays for itself through improved retention and expansion revenue.`,
 
-The difference comes down to intentional organizational design:
-• Scalability — Properly structured CS teams scale efficiently without reorganization chaos  
-• Predictable Economics — Clear segmentation models create reliable capacity planning  
-• Revenue Impact — Well-designed CS functions typically achieve GRR of 85–95% and NRR of 105–130%  
-• Talent Retention — Clear roles and career ladders reduce turnover and protect institutional knowledge  
-• Cross-Functional Alignment — Proper CS design eliminates handoff gaps with Sales, Support, and Product
-
-Most companies build CS reactively, hiring when problems arise and without strategic design. This leads to dysfunction, unclear ownership, inefficient processes, and poor retention. Our approach builds CS intentionally from day one so structure aligns with business strategy and customer needs.`,
-
+    whyThisMattersPoints: [
+      'Scalability — Properly structured CS teams scale efficiently without reorganization chaos',
+      'Predictable Economics — Clear segmentation models create reliable capacity planning',
+      'Revenue Impact — Well-designed CS functions typically achieve GRR of 85–95% and NRR of 105–130%',
+      'Talent Retention — Clear roles and career ladders reduce turnover and protect institutional knowledge',
+      'Cross-Functional Alignment — Proper CS design eliminates handoff gaps with Sales, Support, and Product',
+      'Most companies build CS reactively, leading to dysfunction, unclear ownership, inefficient processes, and poor retention.',
+      'Our approach builds CS intentionally from day one so structure aligns with business strategy and customer needs.'
+    ],
+    
     engagement: {
       duration: '6–8 weeks',
       format: 'Remote + optional on-site workshops',

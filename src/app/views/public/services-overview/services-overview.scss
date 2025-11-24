@@ -1,9 +1,9 @@
 .services {
-    padding: 60px 0;
+    padding: 0px 0;
 }
 
 .services__header {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 
     @media (max-width: 768px) {
         margin-bottom: 56px;
@@ -15,14 +15,14 @@
     line-height: 1.7;
     color: var(--text-secondary);
     max-width: 800px;
-    margin: 24px auto 0;
+    margin: 12px auto 0;
 }
 
 .services__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     @media (max-width: 1024px) {
         grid-template-columns: repeat(2, 1fr);
@@ -38,7 +38,7 @@
 .service-card {
     display: flex;
     flex-direction: column;
-    padding: 32px;
+    padding: 24px;
     text-decoration: none;
     color: inherit;
     height: 100%;

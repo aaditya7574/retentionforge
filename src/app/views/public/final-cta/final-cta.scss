@@ -1,7 +1,7 @@
 .final-cta {
     background: linear-gradient(135deg, #fdfdfc 0%, #f7f9f8 100%);
     color: var(--text-primary);
-    padding: 140px 0;
+    padding: 60px 0;
     position: relative;
     overflow: hidden;
 
@@ -32,7 +32,7 @@
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 700;
     line-height: 1.15;
-    margin-bottom: 28px;
+    margin-bottom: 16px;
     color: var(--text-primary);
 
     br[aria-hidden] {
@@ -56,9 +56,6 @@
     }
 }
 
-.final-cta__actions {
-    margin: 50px 0;
-}
 
 .btn-large {
     padding: 18px 48px;

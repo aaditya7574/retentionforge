@@ -51,7 +51,16 @@
         <h2 class="section-title">
             <i class="fa-solid fa-chart-line"></i> Why This Matters
         </h2>
-        <div class="why-matters-text" [innerHTML]="service.whyThisMattersExtended"></div>
+
+        <p class="why-matters-text">
+            {{ service.whyThisMattersIntro }}
+        </p>
+
+        <ul class="why-matters-list">
+            @for (point of service.whyThisMattersPoints; track point) {
+            <li>{{ point }}</li>
+            }
+        </ul>
 
         <div class="impact-grid">
             @for (item of service.impact; track item.title) {
@@ -63,6 +72,7 @@
             }
         </div>
     </section>
+
 
     <!-- 4. Typical Engagement -->
     <section class="service-section">

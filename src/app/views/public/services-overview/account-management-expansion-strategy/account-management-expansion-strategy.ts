@@ -25,7 +25,6 @@ export class AccountManagementExpansionStrategy implements OnInit {
       'Compensation & Incentive Design – Commissions and bonus structures aligned with expansion goals without harming customer relationships',
       'Multi-Year Contract Strategy – Pricing strategies, commitment structures, and negotiation frameworks for multi-year deals',
       'Sales-CS Handoff Protocols – Clear qualification gates and communication standards defining transitions between CS, AM, and Sales',
-      'Expansion Metrics & Reporting – Dashboard design tracking pipeline, conversion, deal velocity, and NRR impact with team-level visibility',
       'Technology Stack Recommendations – Tools for managing expansion pipelines, communication tracking, and automated opportunity discovery',
       '90-Day Launch Plan – Implementation roadmap covering hiring (if needed), training, pilot accounts, and success measures'
     ],

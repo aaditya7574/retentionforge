@@ -23,7 +23,6 @@ export class OnboardingImplementationOptimization implements OnInit {
       'Time-to-Value Optimization – Strategies to reduce onboarding duration by 30–50% through parallel workflows and friction removal',
       'Standardized Onboarding Methodology – Repeatable phases, milestones, deliverables, and success criteria across all customer segments',
       'Customer Onboarding Playbooks – Tiered playbooks with timelines, task lists, communication templates, and escalation paths',
-      'Customer-Facing Assets – Welcome kits, setup guides, training materials, video tutorials, and knowledge base content for self-service enablement',
       'Resource Optimization Framework – Automation, templatization, and enablement strategies reducing delivery hours while protecting outcomes',
       'Success Criteria & Metrics – Clear definition of “onboarding complete” with adoption milestones, usage thresholds, and value indicators',
       'Onboarding Technology Stack – Recommended tools for project management, communication, training, and progress tracking',

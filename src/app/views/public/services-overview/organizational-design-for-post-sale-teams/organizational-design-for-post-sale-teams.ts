@@ -27,7 +27,7 @@ export class OrganizationalDesignForPostSaleTeams implements OnInit {
       'Scaling Plan – A phased roadmap showing how structure evolves as the company scales from $20M → $50M → $100M ARR',
       'Change Management Strategy – Communication plan, transition roadmap, and sequencing guidance for smooth implementation',
       'Governance & Decision Rights Matrix – RACI framework defining responsibility, accountability, and cross-team decision ownership',
-      'Cost Analysis & ROI Model – Financial modeling illustrating headcount cost, efficiency gains, and expected business outcomes'
+      // 'Cost Analysis & ROI Model – Financial modeling illustrating headcount cost, efficiency gains, and expected business outcomes'
     ],
 
     impact: [

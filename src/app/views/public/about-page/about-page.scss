@@ -1,5 +1,5 @@
 .about-hero {
-    padding: 140px 0 80px;
+    padding: 140px 0 60px;
     background:
         radial-gradient(circle at 20% 80%, rgba(33, 128, 141, 0.10) 0%, transparent 60%),
         radial-gradient(circle at 80% 20%, rgba(230, 129, 97, 0.08) 0%, transparent 65%);
@@ -8,6 +8,9 @@
     @media (max-width: 768px) {
         padding: 100px 0 80px;
     }
+}
+.industry-leadership{
+    padding: 60px 0px !important ;
 }
 
 .about-hero__inner {
@@ -122,7 +125,7 @@
 
 .industry-leadership__heading {
     line-height: 1.2;
-    margin-bottom: 36px;
+    margin-bottom: 12px;
     letter-spacing: -0.5px;
 }
 
@@ -130,7 +133,7 @@
     font-size: 1.15rem;
     line-height: 1.8;
     color: var(--text-secondary);
-    margin-bottom: 28px;
+    margin-bottom: 12px;
 
     strong {
         color: var(--text-primary);
@@ -225,7 +228,7 @@
 // 
 .difference {
     background: #fafaf7;
-    padding: 140px 0;
+    padding: 60px 0;
 
     @media (max-width: 768px) {
         padding: 100px 0;
@@ -239,7 +242,7 @@
 }
 
 .difference__heading {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     line-height: 1.2;
 }
 
@@ -247,7 +250,7 @@
     font-size: 1.25rem;
     line-height: 1.8;
     color: var(--text-primary);
-    margin-bottom: 56px;
+    margin-bottom: 32px;
 
     strong {
         color: var(--primary);
@@ -428,10 +431,27 @@
     }
 }
 
+.philosophy__heading{
+    margin-bottom: 12px;
+}
+
+
+.philosophy__body{
+    margin-bottom: 12px;
+}
+.philosophy__highlight{
+    margin-top: 16px;
+}
+.philosophy__cta{
+    margin-top: 32px;
+}
+.philosophy__principles li{
+    line-height: 1.1 !important;
+}
 
 
 .about-cta {
-    padding: 120px 0;
+    padding: 60px 0;
     background: linear-gradient(135deg, rgba(33, 128, 141, 0.04) 0%, rgba(230, 129, 97, 0.04) 100%);
     border-top: 1px solid var(--border-light);
     border-bottom: 1px solid var(--border-light);

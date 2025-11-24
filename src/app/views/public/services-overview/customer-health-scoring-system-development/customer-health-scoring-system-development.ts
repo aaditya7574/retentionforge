@@ -24,10 +24,8 @@ export class CustomerHealthScoringSystemDevelopment implements OnInit {
       'Risk Thresholds & Alert Triggers – Automated risk-level assignment with thresholds for critical, high, medium, and low health',
       'Trending & Predictive Analytics – Momentum tracking and predictive models identifying 30/60/90-day risk trends',
       'Playbook Integration Framework – Automated assignment of CSM playbooks based on health score and risk level',
-      'CS Operations Dashboard Design – Visualization and reporting dashboards for CSMs, managers, and executives',
       'Score Validation & Calibration – Statistical validation to ensure the model reliably predicts renewals and expansions with ongoing calibration recommendations',
       'Documentation & Training Materials – Detailed scoring logic, methodology documentation, and CSM training guides',
-      'Platform Implementation Guide – Technical specifications for deploying scoring models in Gainsight, ChurnZero, Totango, or your custom CS platform'
     ],
 
     impact: [
@@ -43,13 +41,14 @@ export class CustomerHealthScoringSystemDevelopment implements OnInit {
       format: 'Remote + optional on-site sessions',
       involvement: 'Data access · Stakeholder workshops · Validation sessions · Implementation planning'
     },
-
+    
     idealFor: [
       'SaaS companies with 100+ customers needing systematic health tracking',
       'Organizations relying on simplistic or inaccurate health scoring models',
       'CS teams managing large portfolios needing structured prioritization',
-      'Companies implementing or optimizing Customer Success Platforms (Gainsight, Totango, ChurnZero, etc.)'
+      'Companies implementing or optimizing Customer Success Platforms'
     ],
+
 
     whyThisMattersExtended: `Customer health scoring transforms Customer Success from reactive firefighting into proactive portfolio management. 
 Without robust health scoring, teams rely on intuition—leading to missed early signals and last-minute renewal challenges.
