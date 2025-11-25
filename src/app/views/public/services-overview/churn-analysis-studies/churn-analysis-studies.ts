@@ -28,7 +28,7 @@ export class ChurnAnalysisStudies implements OnInit {
     ],
 
     impact: [
-      { title: '2–5 Point GRR Improvement', description: 'ypical increase in Gross Revenue Retention within 12 months of implementing recommendations' },
+      { title: '2–5 Point GRR Improvement', description: 'Typical increase in Gross Revenue Retention within 12 months of implementing recommendations' },
       { title: 'Direct Bottom-Line Impact', description: 'Each 1% reduction in churn = retained revenue and improved unit economics' },
       { title: 'Stronger Investor Confidence', description: 'Clear churn understanding and mitigation plan significantly improves fundraising optics' },
       { title: 'Better Product & Segmentation Decisions', description: 'Customer voice directly informs roadmap and ideal customer profile refinement' }
@@ -49,7 +49,7 @@ export class ChurnAnalysisStudies implements OnInit {
 
     whyThisMattersExtended: `Churn directly impacts your company's growth trajectory and valuation. A SaaS company with 5% annual churn grows 40% faster than one with 10% churn — assuming identical new customer acquisition rates.
 
-Most companies struggle with churn analysis because they lack the time, objectivity, and expertise to conduct thorough customer interviews. Customers often won’t share honest feedback with their CSM or Account manager, but they’ll open up to a neutral third party. Our systematic approach ensures you get the truth — not the polite version.`
+Most companies struggle with churn analysis because they lack the time, objectivity, and expertise to conduct thorough customer interviews. Customers often won’t share honest feedback with their CSM or Account Manager, but they’ll open up to a neutral third party. Our systematic approach ensures you get the truth — not the polite version.`
   };
 
   ngOnInit(): void {
