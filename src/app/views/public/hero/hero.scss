@@ -4,7 +4,7 @@
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 140px 0 100px;
+    padding: 140px 0 40px !important;
     background: linear-gradient(135deg, #fcfcf9 0%, #f5f7f6 100%);
 }
 
@@ -72,7 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    min-height: 70vh;
+    // min-height: 70vh;
 
     @media (max-width: 992px) {
         text-align: center;
@@ -107,7 +107,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    min-height: 80vh;
+    min-height: 60vh;
 }
 
 .hero__content {
@@ -148,13 +148,5 @@
         width: 100%;
         max-width: 320px;
         margin: 0 auto;
-    }
-}
-
-/* Extra breathing room on large screens */
-@media (min-width: 1200px) {
-    .hero {
-        padding-top: 100px;
-        padding-bottom: 60px;
     }
 }
