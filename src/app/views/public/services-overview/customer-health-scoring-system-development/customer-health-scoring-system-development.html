@@ -51,7 +51,7 @@
         <h2 class="section-title">
             <i class="fa-solid fa-chart-line"></i> Why This Matters
         </h2>
-        <div class="why-matters-text" [innerHTML]="service.whyThisMattersExtended"></div>
+        <!-- <div class="why-matters-text" [innerHTML]="service.whyThisMattersExtended"></div> -->
 
         <div class="impact-grid">
             @for (item of service.impact; track item.title) {
@@ -69,24 +69,42 @@
         <h2 class="section-title">
             <i class="fa-solid fa-calendar-check"></i> Typical Engagement
         </h2>
+
         <div class="engagement-grid">
+
             <div class="engagement-card card">
                 <i class="fa-solid fa-clock engagement-icon"></i>
-                <div class="engagement-label">Duration</div>
+                <div class="engagement-label">Timeline</div>
                 <div class="engagement-value">{{ service.engagement.duration }}</div>
             </div>
+
             <div class="engagement-card card">
-                <i class="fa-solid fa-laptop-house engagement-icon"></i>
-                <div class="engagement-label">Format</div>
-                <div class="engagement-value">{{ service.engagement.format }}</div>
+                <i class="fa-solid fa-lightbulb engagement-icon"></i>
+                <div class="engagement-label">Discovery</div>
+                <div class="engagement-value">{{ service.engagement.discovery }}</div>
             </div>
+
             <div class="engagement-card card">
-                <i class="fa-solid fa-users engagement-icon"></i>
-                <div class="engagement-label">Your Team’s Involvement</div>
-                <div class="engagement-value">{{ service.engagement.involvement }}</div>
+                <i class="fa-solid fa-pencil engagement-icon"></i>
+                <div class="engagement-label">Input Design</div>
+                <div class="engagement-value">{{ service.engagement.inputDesign }}</div>
             </div>
+
+            <div class="engagement-card card">
+                <i class="fa-solid fa-handshake engagement-icon"></i>
+                <div class="engagement-label">Alignment</div>
+                <div class="engagement-value">{{ service.engagement.alignment }}</div>
+            </div>
+
+            <div class="engagement-card card">
+                <i class="fa-solid fa-file-lines engagement-icon"></i>
+                <div class="engagement-label">Blueprint Delivery</div>
+                <div class="engagement-value">{{ service.engagement.blueprintDelivery }}</div>
+            </div>
+
         </div>
     </section>
+
 
     <!-- 5. Ideal For -->
     <section class="service-section">
