@@ -1,0 +1,154 @@
+<section class="about-hero section fade-in">
+    <div class="container">
+        <div class="about-hero__inner">
+
+            <span class="about-hero__eyebrow">Resources Library</span>
+
+            <h1 class="about-hero__title">
+                Customer Success Frameworks,<br />
+                Tools & Assessments
+            </h1>
+
+            <div class="about-hero__body">
+                <p>
+                    Free resources to help you build and scale your customer retention engine.
+                    Each framework is battle-tested, actionable, and ready to implement.
+                </p>
+                <p>
+                    RetentionForge publishes comprehensive frameworks,
+                    assessments, and playbooks designed to help SaaS leaders understand their current state,
+                    identify improvement opportunities, and implement proven strategies for retention and
+                    expansion. Download any resource below - no email required, no sign-up walls. Just direct
+                    access to actionable frameworks.
+                </p>
+
+            </div>
+
+            <!-- <div class="about-hero__cta">
+                <a routerLink="/contact" fragment="consultation-form" class="btn btn-primary">
+                    Schedule a Consultation
+                </a>
+                <a routerLink="/services" class="btn btn-secondary">
+                    Explore Services
+                </a>
+            </div> -->
+
+        </div>
+    </div>
+</section>
+
+<section class="resources-section">
+    <div class="container">
+        <h2 class="section-title">Resources</h2>
+
+
+        <div class="resources-grid">
+
+            <div class="resource-card" *ngFor="let r of resources">
+
+                <div class="resource-top w-100 d-flex justify-content-between">
+                    <div class="resource-icon">
+                        <i class="fa-solid" [ngClass]="r.icon"></i>
+                    </div>
+
+                    <div>
+                        <span class="badge" [ngClass]="r.status === 'available' ? 'badge-available' : 'badge-soon'">
+                            {{ r.status === 'available' ? 'Available Now' : 'Coming Soon' }}
+                        </span>
+                    </div>
+                </div>
+
+                <h3 class="resource-title">{{ r.title }}</h3>
+
+                <p class="resource-desc">{{ r.description }}</p>
+
+                <!-- Available -->
+                <a *ngIf="r.status === 'available'" [href]="r.downloadUrl" class="btn btn-primary resource-btn"
+                    target="_blank">
+                    Download Now
+                </a>
+
+                <!-- Coming Soon -->
+                <button *ngIf="r.status === 'coming-soon'" class="btn btn-secondary resource-btn"
+                    (click)="openNotifyModal(r.title)">
+                    Notify Me
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- NOTIFY ME MODAL -->
+<div class="modal fade" id="notifyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 500px;">
+        <div class="modal-content notify-modal">
+
+            <!-- Close Button -->
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            <div class="modal-body">
+
+                <h2 class="notify-title">Get Notified When This Resource is Available</h2>
+
+                <p class="notify-subtitle">
+                    We’ll send you an email as soon as
+                    <strong>{{ selectedResource }}</strong>
+                    is published—no spam, just direct access to new frameworks.
+                </p>
+
+                <!-- SUCCESS MESSAGE -->
+                <div *ngIf="showSuccess" class="notify-success">
+                    Thanks! We’ll email you when this resource is ready.
+                </div>
+
+                <!-- FORM -->
+                <form (ngSubmit)="submitNotify()" *ngIf="!showSuccess" [formGroup]="notifyForm">
+
+                    <div class="form-group mb-3">
+                        <label>Full Name *</label>
+                        <input formControlName="name" type="text" class="form-control" required />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Email Address *</label>
+                        <input formControlName="email" type="email" class="form-control" required />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Company (optional)</label>
+                        <input formControlName="company" type="text" class="form-control" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100" [disabled]="notifyForm.invalid">
+                        Notify Me
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<section class="about-cta section fade-in">
+    <div class="container">
+        <div class="about-cta__inner">
+            <h2 class="about-cta__heading h2">
+                Want Custom Guidance on Your <br>Specific Challenges?
+            </h2>
+
+            <p class="about-cta__subheading">
+                These frameworks are powerful tools, but every company’s situation is unique.
+                Schedule a free consultation to discuss your specific needs and explore how personalized
+                consulting could accelerate your results.
+            </p>
+
+            <div class="about-cta__actions">
+                <a routerLink="/contact" fragment="consultation-form" class="btn btn-primary btn-large">
+                    Schedule a Consultation
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

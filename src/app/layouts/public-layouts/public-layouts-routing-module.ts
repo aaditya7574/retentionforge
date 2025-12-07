@@ -16,6 +16,7 @@ import { OrganizationalDesignForPostSaleTeams } from "../../views/public/service
 import { OnboardingImplementationOptimization } from "../../views/public/services-overview/onboarding-implementation-optimization/onboarding-implementation-optimization";
 import { ExecutiveCoachingForCustomerSuccessLeaders } from "../../views/public/services-overview/executive-coaching-for-customer-success-leaders/executive-coaching-for-customer-success-leaders";
 import { KPIFrameworkMetricsDesign } from "../../views/public/services-overview/kpi-framework-metrics-design/kpi-framework-metrics-design";
+import { Resources } from "../../views/resources/resources";
 
 export const PUBLIC_ROUTES: Routes = [
   {
@@ -74,6 +75,10 @@ export const PUBLIC_ROUTES: Routes = [
   {
     path: 'services/KPI-framework-metrics-design',
     component: KPIFrameworkMetricsDesign,
+  },
+  {
+    path: 'resources',
+    component: Resources,
   },
   {
     path: 'contact',
