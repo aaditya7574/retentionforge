@@ -14,95 +14,124 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class Resources implements OnInit {
   resources = [
+
+
     {
-      title: "Revenue Retention Strategy Audit",
+      title: "Churn Diagnostic",
       description:
-        "Quick diagnostic to assess your retention strategy maturity. Reveals whether you’re reactive or proactive—and which levers would have the highest impact on GRR.",
-      icon: "fa-circle-check",
+        "Discover your real churn drivers with a 5-question diagnostic. Assess whether you’re solving the right problems or optimizing blind—and uncover patterns that point directly to your highest-impact retention improvements.",
+      icon: "fa-clipboard-check",
       status: "available",
       downloadUrl:
         "https://www.retentionforge.io/free_content/Churn_Diagnostic.pdf"
     },
+    // Order 1
+    {
+      title: "CS Org Design Checklist",
+      description:
+        "Comprehensive checklist to evaluate whether your CS organization is built to scale or running on heroic effort.Covers segmentation, portfolios, roles, metrics, compensation, and handoffs so you can uncover structural gaps limiting retention and expansion.",
+      icon: "fa-list-check",
+      status: "coming-soon"
+    },
 
+    // Order 2 Professional Services Profitability Assessment
     {
       title: "Professional Services Profitability Assessment",
       description:
-        "Evaluate whether your PS organization is a profit center or cost center. Identify opportunities to improve margins while maintaining customer outcomes.",
+        "Evaluate whether your PS organization is a true profit center or an underperforming cost center. Diagnose margins, utilization, pricing, and portfolio design to identify the specific levers that would unlock the largest gains in PS profitability and enterprise value.",
       icon: "fa-layer-group",
       status: "coming-soon"
     },
 
+    // Order 3 
+
+
+    //  Order 4 Customer Health Score Builder Framework
     {
       title: "Customer Health Score Builder Framework",
       description:
-        "Step-by-step framework for building health scoring systems that actually predict churn. Includes attribute selection, weighting methodology, and validation process.",
+        "Step-by-step framework for designing a health score that actually predicts churn. Covers data inventory, attribute selection, weighting, segment-specific models, and validation so your team can move from reactive saves to systematic, early-warning risk detection.",
       icon: "fa-chart-line",
       status: "coming-soon"
     },
 
+    //  Order 5 Expansion Opportunity Qualification Matrix
+
     {
       title: "Expansion Opportunity Qualification Matrix",
       description:
-        "Systematic approach to identifying and qualifying expansion opportunities. Transform expansion from opportunistic to strategic with clear playbooks and scoring criteria.",
+        "Systematic approach to finding and prioritizing expansion revenue hiding in your customer base. Define expansion scenarios, score accounts, and qualify opportunities so your team stops waiting for upsell requests and starts driving NRR intentionally.",
       icon: "fa-bullseye",
       status: "coming-soon"
     },
 
-    {
-      title: "Post-Sale Org Design Blueprint",
-      description:
-        "Design intentional organizational structures for CS, PS, Support, and AM teams. Includes roles, responsibilities, handoffs, and compensation alignment.",
-      icon: "fa-sitemap",
-      status: "coming-soon"
-    },
-
+    //Order 6
     {
       title: "Time-to-Value Accelerator Checklist",
       description:
-        "30-point checklist across onboarding phases. Accelerate implementation timelines by 30–50% while improving first-year retention through systematic process design.",
+        "30-point checklist to shorten implementation timelines by 30–50% while strengthening first-year retention. Walks through five onboarding phases with concrete success metrics so customers reach value fast and stay long-term.",
       icon: "fa-gauge-high",
       status: "coming-soon"
     },
 
+    //Order 7
     {
       title: "CS Leadership Competency Assessment",
       description:
-        "Self-assessment across five leadership domains including design, metrics, influence, talent development, and strategic thinking. Identifies gaps & priorities.",
+        " Self-assessment for Customer Success leaders across five core domains: org design, metrics, cross-functional influence, talent development, and strategic thinking. Identifies strengths, gaps, and the highest-impact areas to focus your leadership development.",
       icon: "fa-briefcase",
       status: "coming-soon"
     },
 
+    // Order 8
+    {
+      title: "Customer Segmentation Decision Tree",
+      description:
+        "Decision tree to design your optimal segmentation model and CSM-to-account ratios. Helps you choose between tier-, vertical-, complexity-, or hybrid-based models so resources match customer value and complexity instead of being allocated ad-hoc.",
+      icon: "fa-diagram-project",
+      status: "coming-soon"
+    },
+
+    //Order 9
+
     {
       title: "KPI Selection & Target-Setting Framework",
       description:
-        "Define the metrics that matter. Includes leading/lagging indicators, cascading targets, and dashboard structures for varying org levels.",
+        " Framework for choosing the right CS metrics and building a metrics hierarchy from company to team to individual. Guides you through metric selection, target-setting, and dashboard design so everyone knows what “good” looks like and how performance is measured.",
       icon: "fa-chart-column",
       status: "coming-soon"
     },
 
     {
-      title: "Customer Segmentation Decision Tree",
+      title: "Revenue Retention Strategy Audit",
       description:
-        "Choose the right segmentation model with ideal CSM-to-account ratios. Includes segmentation types, tiering, and scaling guidance.",
-      icon: "fa-diagram-project",
-      status: "coming-soon"
+        "Quick audit to assess whether your revenue retention strategy is reactive or truly proactive. Reveals how well you’re using health scores, playbooks, and leading indicators—and which levers would deliver the biggest impact on GRR and NRR.",
+      icon: "fa-circle-check",
+      status: "coming-soon",
+
     },
 
     {
-      title: "Renewal Risk Early Warning System",
+      title: "Post-Sale Org Design Blueprint",
       description:
-        "Eight leading indicators that detect churn risk 90 days before renewal. Includes intervention playbooks and save-rate tracking.",
-      icon: "fa-triangle-exclamation",
+        "Blueprint for designing an intentional post-sale organization across CS, PS, Support, and Account Management. Helps you define roles, handoffs, metrics, and incentives so your post-sale engine scales with ARR instead of becoming a growth bottleneck.",
+      icon: "fa-sitemap",
       status: "coming-soon"
     },
 
-    {
-      title: "CS Org Design Checklist",
-      description:
-        "Framework for designing scalable CS orgs—roles, responsibilities, compensation, career paths, and scaling systems.",
-      icon: "fa-list-check",
-      status: "coming-soon"
-    }
+
+
+
+
+    // {
+    //   title: "Renewal Risk Early Warning System",
+    //   description:
+    //     "Eight leading indicators that detect churn risk 90 days before renewal. Includes intervention playbooks and save-rate tracking.",
+    //   icon: "fa-triangle-exclamation",
+    //   status: "coming-soon"
+    // },
+
+
   ];
 
   notifyForm!: FormGroup;

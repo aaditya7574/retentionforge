@@ -18,6 +18,12 @@
                 </li>
 
                 <li>
+                    <a routerLink="/resources" routerLinkActive="active">
+                        <i class="fa-regular fa-file-lines"></i> Resources
+                    </a>
+                </li>
+
+                <li>
                     <a routerLink="/about" routerLinkActive="active">
                         <i class="fa-solid fa-circle-info"></i> About
                     </a>
@@ -100,11 +106,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
-                    <a routerLink="/resources" routerLinkActive="active">
-                        <i class="fa-regular fa-file-lines"></i> Resources
-                    </a>
-                </li>
+
                 <li>
                     <a routerLink="/contact" routerLinkActive="active">
                         <i class="fa-solid fa-phone"></i> Contact
@@ -145,6 +147,11 @@
             <li>
                 <a routerLink="/welcome" routerLinkActive="active-submenu" [routerLinkActiveOptions]="{exact: true}"
                     (click)="closeMenu()">Home</a>
+            </li>
+            <li>
+                <a routerLink="/resources" routerLinkActive="active">
+                     Resources
+                </a>
             </li>
             <li>
                 <a routerLink="/about" routerLinkActive="active-submenu" (click)="closeMenu()">About</a>
