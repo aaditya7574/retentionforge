@@ -17,6 +17,7 @@ import { OnboardingImplementationOptimization } from "../../views/public/service
 import { ExecutiveCoachingForCustomerSuccessLeaders } from "../../views/public/services-overview/executive-coaching-for-customer-success-leaders/executive-coaching-for-customer-success-leaders";
 import { KPIFrameworkMetricsDesign } from "../../views/public/services-overview/kpi-framework-metrics-design/kpi-framework-metrics-design";
 import { Resources } from "../../views/resources/resources";
+import { Partners } from "../../views/public/partners/partners";
 
 export const PUBLIC_ROUTES: Routes = [
   {
@@ -83,6 +84,10 @@ export const PUBLIC_ROUTES: Routes = [
   {
     path: 'contact',
     component: ContactUs,
+  },
+  {
+    path: 'partners',
+    component: Partners,
   },
 
 ];

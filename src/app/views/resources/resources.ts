@@ -183,7 +183,7 @@ export class Resources implements OnInit {
     this.showSuccess = true;
 
     const formData = new FormData();
-    formData.append("fullName", this.notifyForm.get('fullName')?.value);
+    formData.append("fullName", this.notifyForm.get('name')?.value);
     formData.append("email", this.notifyForm.get('email')?.value);
     formData.append("company", this.notifyForm.get('company')?.value || "");
     formData.append("resource", this.selectedResource);  // extra field

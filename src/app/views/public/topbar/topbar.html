@@ -16,20 +16,6 @@
                         <i class="fa-solid fa-house"></i> Home
                     </a>
                 </li>
-
-                <li>
-                    <a routerLink="/resources" routerLinkActive="active">
-                        <i class="fa-regular fa-file-lines"></i> Resources
-                    </a>
-                </li>
-
-                <li>
-                    <a routerLink="/about" routerLinkActive="active">
-                        <i class="fa-solid fa-circle-info"></i> About
-                    </a>
-                </li>
-
-                <!-- Services – Mega-style on hover (no dropdown arrow clutter) -->
                 <li class="nav-item-services">
                     <a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }"
                         class="nav-link-services" (mouseenter)="isShowDesktopMenu = true;"
@@ -108,10 +94,32 @@
                 </li>
 
                 <li>
+                    <a routerLink="/resources" routerLinkActive="active">
+                        <i class="fa-regular fa-file-lines"></i> Resources
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/about" routerLinkActive="active">
+                        <i class="fa-solid fa-circle-info"></i> About
+                    </a>
+                </li>
+
+                <li class="nav-partner">
+                    <a routerLinkActive="active" class="partner-link" routerLink="/partners">
+                        <i class="fa-solid fa-handshake"></i>
+                        Partners
+                        <!-- <span class="coming-soon-badge">Coming Soon</span> -->
+                    </a>
+                </li>
+
+                <!-- Services – Mega-style on hover (no dropdown arrow clutter) -->
+
+                <!-- <li>
                     <a routerLink="/contact" routerLinkActive="active">
                         <i class="fa-solid fa-phone"></i> Contact
                     </a>
-                </li>
+                </li> -->
 
             </ul>
         </nav>
@@ -149,16 +157,6 @@
                     (click)="closeMenu()">Home</a>
             </li>
             <li>
-                <a routerLink="/resources" routerLinkActive="active">
-                     Resources
-                </a>
-            </li>
-            <li>
-                <a routerLink="/about" routerLinkActive="active-submenu" (click)="closeMenu()">About</a>
-            </li>
-
-            <!-- Services Parent + Dropdown -->
-            <li>
                 <a href="javascript:void(0)" class="services-toggle" (click)="toggleMobileServices()"
                     [class.active]="isServicesPageActive()">
                     Services
@@ -194,10 +192,27 @@
                             Coaching</a></li>
                 </ul>
             </li>
+            <li>
+                <a routerLink="/resources" routerLinkActive="active">
+                    Resources
+                </a>
+            </li>
+            <li>
+                <a routerLink="/about" routerLinkActive="active-submenu" (click)="closeMenu()">About</a>
+            </li>
+            <li>
+                <a routerLinkActive="active" class="partner-link-mobile" routerLink="/partners">
+                    <i class="fa-solid fa-handshake"></i>
+                    Partners
+                    <!-- <span class="coming-soon-badge">Coming Soon</span> -->
+                </a>
+            </li>
+            <!-- Services Parent + Dropdown -->
 
+            <!-- 
             <li>
                 <a routerLink="/contact" routerLinkActive="active-submenu" (click)="closeMenu()">Contact</a>
-            </li>
+            </li> -->
 
             <!-- CTA -->
             <li class="mobile-cta" (click)="closeMenu()">

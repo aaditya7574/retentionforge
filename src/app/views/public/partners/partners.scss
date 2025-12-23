@@ -1,0 +1,37 @@
+.partners-placeholder {
+
+    padding: 140px 0 70px;
+
+    &__inner {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    &__icon {
+        font-size: 2.6rem;
+        color: var(--primary);
+        margin-bottom: 16px;
+        opacity: 0.9;
+    }
+
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(33, 128, 141, 0.1);
+        color: var(--primary);
+        margin-bottom: 14px;
+    }
+
+    &__text {
+        font-size: 0.95rem;
+        color: #6b7280;
+        margin-top: 8px;
+    }
+}
