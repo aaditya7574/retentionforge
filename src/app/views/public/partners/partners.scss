@@ -564,7 +564,7 @@
 .section-title {
     text-align: center;
     font-size: 2.75rem;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-weight: 600;
 }
 
@@ -800,10 +800,9 @@
     text-align: center;
     font-weight: 600;
 }
-
 /* PARTNERS SECTION */
 .partners-section {
-    padding: 80px 40px;
+    padding: 40px 20px 80px; /* reduced top padding for better whitespace */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -812,7 +811,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-weight: 600;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     color: #262828;
 }
 
@@ -841,16 +840,30 @@
     background: #FCFCF9;
     border: 1px solid #E8E8E6;
     border-radius: 12px;
-    padding: 48px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 48px 32px 32px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
 .partner-card:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
     background: #FDFDFB;
+}
+
+/* BADGE (moved above logo) */
+.partner-badge {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #21808D;
+    background: rgba(33,128,141,0.1);
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    width: fit-content;
+    text-align: center;
 }
 
 /* LOGO */
@@ -869,19 +882,6 @@
 
 .partner-logo:hover {
     filter: brightness(1.05) contrast(1.1);
-}
-
-/* BADGE */
-.partner-badge {
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #21808D;
-    background: rgba(33, 128, 141, 0.1);
-    padding: 6px 12px;
-    border-radius: 6px;
-    margin-bottom: 16px;
-    width: fit-content;
 }
 
 /* NAME & TAGLINE */
@@ -949,6 +949,10 @@
     margin-bottom: 32px;
 }
 
+.partner-tags a {
+    text-decoration: none;
+}
+
 .partner-tags span {
     font-size: 14px;
     font-weight: 400;
@@ -956,6 +960,14 @@
     border: 1px solid #21808D;
     border-radius: 20px;
     padding: 8px 16px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.partner-tags span:hover {
+    background: #21808D;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* BUTTON */
@@ -976,21 +988,59 @@
     background: #D66E4F;
 }
 
-/* CONTACT */
-.partner-contact {
-    font-size: 13px;
+/* CENTERED PARTNERSHIP CONTACT BELOW GRID */
+.partner-contact-centered {
+    font-size: 14px;
     color: #626C71;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
-.partner-contact a {
+.partner-contact-centered a {
     color: #21808D;
     text-decoration: none;
 }
 
-.partner-contact a:hover {
+.partner-contact-centered a:hover {
     text-decoration: underline;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 767px) {
+    .partners-section {
+        padding: 40px 20px 60px;
+    }
+
+    .partner-card {
+        padding: 24px;
+    }
+
+    .partner-name {
+        font-size: 20px;
+    }
+
+    .partner-tagline {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .partner-desc, .partner-bullets li {
+        font-size: 14px;
+    }
+
+    .partner-tags span {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .partner-btn {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .partner-contact-centered {
+        margin-top: 40px;
+    }
 }
 
 /* ===== MOBILE ADJUSTMENTS ===== */
