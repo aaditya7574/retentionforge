@@ -8,10 +8,11 @@ import { ValueProposition } from "../value-proposition/value-proposition";
 import { ServicesOverview } from "../services-overview/services-overview";
 import { SocialProof } from "../social-proof/social-proof";
 import { FinalCta } from "../final-cta/final-cta";
+import { ChallengesWeSolve } from "../../challenges-we-solve/challenges-we-solve";
 
 @Component({
   selector: 'app-welcome',
-  imports: [Hero, ValueProposition, ServicesOverview, SocialProof, FinalCta],
+  imports: [Hero, ValueProposition, ServicesOverview, SocialProof, FinalCta, ChallengesWeSolve],
   templateUrl: './welcome.html',
   styleUrl: './welcome.scss',
 })
