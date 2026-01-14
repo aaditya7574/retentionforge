@@ -8,35 +8,62 @@
   </header>
   <div class="container">
 
-    <div class="services__grid">
-      @for (service of services; track service.id) {
-      <a [routerLink]="['/services/'+  service.slug]" class="service-card card"
-        [attr.aria-label]="'Learn more about ' + service.name">
-        <div class="service-card__number">{{ service.id }}</div>
-        <h3 class="service-card__title">{{ service.name }}</h3>
-        <p class="service-card__desc">{{ service.description }}</p>
-        <span class="service-card__link">
-          Learn more
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </span>
-      </a>
-      }
+    <!-- Core Retention Services -->
+    <div class="services-group">
+      <h3 class="services-group__title">
+        <i class="fa-solid fa-chart-line"></i>
+        Core Retention Services
+      </h3>
+
+      <div class="services__grid">
+        @for (service of coreRetentionServices; track service.id) {
+        <a [routerLink]="['/services/' + service.slug]" class="service-card card">
+          <div class="service-card__number">{{ service.id }}</div>
+          <h3 class="service-card__title">{{ service.name }}</h3>
+          <p class="service-card__desc">{{ service.description }}</p>
+          <span class="service-card__link">Learn more</span>
+        </a>
+        }
+      </div>
     </div>
 
-    <!-- CTA Section -->
-    <div class="services__cta">
-      <p class="services__cta-text">
-        Not sure which service fits your needs? <strong>Let's talk.</strong>
-      </p>
-      <button routerLink="/contact" fragment="consultation-form" class="btn btn-primary schedule-consultation">
-        <span>
-          <i class="fa-solid fa-headset"></i>
-          Schedule Consultation
-        </span>
-      </button>
+    <!-- Growth & Expansion -->
+    <div class="services-group">
+      <h3 class="services-group__title">
+        <i class="fa-solid fa-person-arrow-up-from-line"></i>
+        Growth & Expansion
+      </h3>
+
+      <div class="services__grid">
+        @for (service of growthExpansionServices; track service.id) {
+        <a [routerLink]="['/services/' + service.slug]" class="service-card card">
+          <div class="service-card__number">{{ service.id }}</div>
+          <h3 class="service-card__title">{{ service.name }}</h3>
+          <p class="service-card__desc">{{ service.description }}</p>
+          <span class="service-card__link">Learn more</span>
+        </a>
+        }
+      </div>
     </div>
+
+    <!-- Leadership & Systems -->
+    <div class="services-group">
+      <h3 class="services-group__title">
+        <i class="fa-solid fa-users-gear"></i>
+        Leadership & Systems
+      </h3>
+
+      <div class="services__grid">
+        @for (service of leadershipSystemsServices; track service.id) {
+        <a [routerLink]="['/services/' + service.slug]" class="service-card card">
+          <div class="service-card__number">{{ service.id }}</div>
+          <h3 class="service-card__title">{{ service.name }}</h3>
+          <p class="service-card__desc">{{ service.description }}</p>
+          <span class="service-card__link">Learn more</span>
+        </a>
+        }
+      </div>
+    </div>
+
   </div>
 </section>
