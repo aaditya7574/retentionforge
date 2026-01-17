@@ -79,6 +79,13 @@
                                             routerLink="/services/executive-coaching-for-customer-success-leaders"
                                             (click)="closeMenu()">Executive CS
                                             Coaching</a></li>
+                                    <li>
+                                        <a routerLink="/services/fractional-leadership"
+                                            routerLinkActive="active-submenu" (click)="closeMenu()">
+                                            Fractional Leadership Services
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -190,6 +197,11 @@
                     <li><a routerLink="/services/executive-coaching-for-customer-success-leaders"
                             routerLinkActive="active-submenu" (click)="closeMenu()">Executive
                             Coaching</a></li>
+                    <li> <a routerLink="/services/fractional-leadership" routerLinkActive="active-submenu"
+                            (click)="closeMenu()">
+                            Fractional Leadership
+                        </a>Executive
+                    </li>
                 </ul>
             </li>
             <li>
@@ -201,7 +213,8 @@
                 <a routerLink="/about" routerLinkActive="active-submenu" (click)="closeMenu()">About</a>
             </li>
             <li>
-                <a routerLinkActive="active-submenu" class="partner-link-mobile" routerLink="/partners" (click)="closeMenu()">
+                <a routerLinkActive="active-submenu" class="partner-link-mobile" routerLink="/partners"
+                    (click)="closeMenu()">
                     Partners
                     <!-- <span class="coming-soon-badge">Coming Soon</span> -->
                 </a>

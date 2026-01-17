@@ -84,6 +84,12 @@ export class ServiceDetails implements OnInit {
         'Comprehensive measurement frameworks with leading and lagging indicators aligned to business outcomes.',
       slug: 'KPI-framework-metrics-design',
     },
+    {
+      id: '11',
+      name: 'Fractional Leadership Services',
+      description: 'Embedded executive leadership for post-sale teams—owning retention, expansion, org design, and board-level accountability on a flexible, fractional basis.',
+      slug: 'fractional-leadership'
+    }
   ];
 
   // ✅ DERIVED GROUPS (NO DATA LOSS)
@@ -96,7 +102,7 @@ export class ServiceDetails implements OnInit {
   );
 
   leadershipSystemsServices = this.services.filter(s =>
-    ['08', '09', '10'].includes(s.id)
+    ['08', '09', '10', '11'].includes(s.id)
   );
 
   ngOnInit(): void {

@@ -18,6 +18,7 @@ import { ExecutiveCoachingForCustomerSuccessLeaders } from "../../views/public/s
 import { KPIFrameworkMetricsDesign } from "../../views/public/services-overview/kpi-framework-metrics-design/kpi-framework-metrics-design";
 import { Resources } from "../../views/resources/resources";
 import { Partners } from "../../views/public/partners/partners";
+import { FractionalLeadership } from "../../views/public/services-overview/fractional-leadership/fractional-leadership";
 
 export const PUBLIC_ROUTES: Routes = [
   {
@@ -76,6 +77,10 @@ export const PUBLIC_ROUTES: Routes = [
   {
     path: 'services/KPI-framework-metrics-design',
     component: KPIFrameworkMetricsDesign,
+  },
+  {
+    path: 'services/fractional-leadership',
+    component: FractionalLeadership
   },
   {
     path: 'resources',

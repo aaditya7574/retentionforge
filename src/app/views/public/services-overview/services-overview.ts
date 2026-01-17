@@ -20,5 +20,12 @@ export class ServicesOverview {
     { id: '08', name: 'Onboarding & Implementation Optimization', description: 'Standardized onboarding processes that accelerate time-to-value and establish foundations for retention.', slug: 'onboarding-implementation-optimization' },
     { id: '09', name: 'Executive Coaching for Customer Success Leaders', description: 'One-on-one advisory for VP/Director-level CS leaders navigating growth challenges and organizational transformation.', slug: 'executive-coaching-for-customer-success-leaders' },
     { id: '10', name: 'KPI Framework & Metrics Design', description: 'Comprehensive measurement frameworks with leading and lagging indicators aligned to business outcomes.', slug: 'KPI-framework-metrics-design' },
+    {
+      id: '11',
+      name: 'Fractional Leadership Services',
+      description: 'Embedded executive leadership for post-sale teams—owning retention, expansion, org design, and board-level accountability on a flexible, fractional basis.',
+      slug: 'fractional-leadership'
+    }
+
   ];
 }
