@@ -17,10 +17,12 @@ export class FractionalLeadership {
 
     overview: `
 Post-sale organizations require strategic executive leadership—clear vision, accountability for NRR and churn, organizational architecture, and the authority to make decisions that drive retention and expansion. Yet many SaaS companies between $5M and $50M ARR are not ready for a full-time VP of Customer Success, Chief Customer Officer, VP of Professional Services, VP of Support, or VP of Account Management.
+
 This is where fractional leadership changes the equation.
+
 Fractional Leadership Services provides experienced, acting executive leadership for your post-sale function—whether Customer Success, Professional Services, Support, Account Management, or a combination as a Chief Customer Officer. Your fractional leader becomes an embedded member of your executive team, owning critical metrics, driving strategic initiatives, and building organizational capacity on a flexible basis.
-Unlike advisory services or traditional consulting, fractional leadership means real accountability. Your fractional executive owns retention targets, reports to the board, makes hiring and organizational decisions, and implements strategy—not just recommends it.
-    `,
+
+Unlike advisory services or traditional consulting, fractional leadership means real accountability. Your fractional executive owns retention targets, reports to the board, makes hiring and organizational decisions, and implements strategy—not just recommends it.    `,
 
     /* ----------------------------------
      * WHAT THIS SERVICE DELIVERS

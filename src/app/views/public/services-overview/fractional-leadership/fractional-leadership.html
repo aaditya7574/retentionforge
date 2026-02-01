@@ -19,9 +19,8 @@
         <h2 class="section-title">
             <i class="fa-solid fa-binoculars"></i> Overview
         </h2>
-        <p class="service-overview-text">
-            {{ service.overview }}
-        </p>
+        <p class="service-overview-text" [innerHTML]="service.overview"></p>
+
     </section>
 
     <!-- 2. Deliverables -->
@@ -51,7 +50,7 @@
 
                 <h3 class="capability-heading">
                     <i class="fa-solid {{ functionIcons[entry.key] }}"></i>
-                    {{ entry.key | titlecase }}
+                    {{ entry.key  }}
                 </h3>
 
                 <ul class="capability-list">
