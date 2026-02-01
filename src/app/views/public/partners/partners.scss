@@ -9,6 +9,10 @@
         padding: 100px 0 80px;
     }
 }
+.container{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
 
 .industry-leadership {
     padding: 60px 0px !important;
@@ -800,9 +804,11 @@
     text-align: center;
     font-weight: 600;
 }
+
 /* PARTNERS SECTION */
 .partners-section {
-    padding: 40px 20px 80px; /* reduced top padding for better whitespace */
+    padding: 40px 20px 80px;
+    /* reduced top padding for better whitespace */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -841,24 +847,24 @@
     border: 1px solid #E8E8E6;
     border-radius: 12px;
     padding: 48px 32px 32px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
 .partner-card:hover {
-    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     background: #FDFDFB;
 }
 
 /* BADGE (moved above logo) */
 .partner-badge {
-    font-size: 12px;
+    font-size: 10px !important;
     font-weight: 600;
     text-transform: uppercase;
     color: #21808D;
-    background: rgba(33,128,141,0.1);
+    background: rgba(33, 128, 141, 0.1);
     padding: 6px 12px;
     border-radius: 6px;
     margin-bottom: 16px;
@@ -874,7 +880,7 @@
 }
 
 .partner-logo {
-    max-width: 240px;
+    max-width: 140px !important;
     max-height: 60px;
     object-fit: contain;
     transition: filter 0.2s ease;
@@ -1024,7 +1030,8 @@
         margin-bottom: 16px;
     }
 
-    .partner-desc, .partner-bullets li {
+    .partner-desc,
+    .partner-bullets li {
         font-size: 14px;
     }
 
@@ -1118,3 +1125,154 @@
 
 @media screen and (min-width: 1024px) {}
 
+.partners-section {
+    padding: 40px 20px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.partners-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #262828;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 cards per row
+    gap: 8px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.partner-card {
+    background: #FCFCF9;
+    border: 1px solid #E8E8E6;
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        background: #FDFDFB;
+    }
+}
+
+.partner-badge {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #21808D;
+    background: rgba(33, 128, 141, 0.1);
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    width: fit-content;
+}
+
+.partner-logo-link {
+    display: block;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.partner-logo {
+    max-width: 180px;
+    max-height: 60px;
+    object-fit: contain;
+    transition: filter 0.2s ease;
+
+    &:hover {
+        filter: brightness(1.05) contrast(1.1);
+    }
+}
+
+.partner-name {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.partner-tagline {
+    font-size: 14px;
+    color: #626C71;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.partner-heading {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.partner-desc {
+    font-size: 14px;
+    color: #626C71;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.partner-bullets {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.partner-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+
+    a span {
+        background: #E8F5F7;
+        color: #21808D;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+}
+
+.partner-btn {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 24px;
+    background: #E68161;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+        background: #D66E4F;
+    }
+}
+
+.partner-contact-centered {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 40px;
+
+    a {
+        color: #21808D;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
