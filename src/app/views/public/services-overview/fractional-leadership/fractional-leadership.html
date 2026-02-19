@@ -3,6 +3,7 @@
     <div class="container">
         <h1 class="service-hero__title">{{ service.name }}</h1>
         <p class="service-hero__lead">{{ service.shortDescription }}</p>
+        <p class="service-hero__supporting">{{ service.supportingDescription }}</p>
     </div>
 
     <div class="breadcrumb pt-5" aria-label="breadcrumb">
@@ -50,7 +51,7 @@
 
                 <h3 class="capability-heading">
                     <i class="fa-solid {{ functionIcons[entry.key] }}"></i>
-                    {{ entry.key  }}
+                    {{ entry.key }}
                 </h3>
 
                 <ul class="capability-list">
@@ -167,60 +168,33 @@
 
         <div class="engagement-grid">
 
-            <!-- Duration & Timeline Card -->
-            <div class="engagement-card card full-width">
+            <!-- Box 1 -->
+            <div class="engagement-card card">
                 <i class="fa-solid fa-clock engagement-icon"></i>
-                <div class="engagement-label">Duration & Timeline</div>
+                <div class="engagement-label">Duration</div>
                 <div class="engagement-value">
-                    <p class="text-center">Typical Duration: 6–12 months (minimum 6 months)</p>
-                    <p class="text-center">Time Commitment: 1–3 days per week (flexible)</p>
-                    <p class="text-center">Termination: 60-day notice from either party</p>
-
-                    <h4>Timeline:</h4>
-                    <ul>
-                        <li>Weeks 1–4: Current state assessment, stakeholder interviews, strategy kickoff</li>
-                        <li>Weeks 5–8: Strategy development, organizational design, process mapping, quick-win
-                            identification</li>
-                        <li>Weeks 9–16: Organizational implementation, team hiring/restructuring, process rollout,
-                            system configuration</li>
-                        <li>Weeks 17–24: Execution, team development, optimization, metrics validation, succession
-                            planning</li>
-                        <li>Weeks 25–52: Sustained execution, continuous improvement, leadership transition planning,
-                            permanent hire support</li>
-                    </ul>
+                    3–9 months, depending on scope and transition plans.
                 </div>
             </div>
 
-            <!-- Team Involvement Card -->
+            <!-- Box 2 -->
+            <div class="engagement-card card">
+                <i class="fa-solid fa-briefcase engagement-icon"></i>
+                <div class="engagement-label">Format</div>
+                <div class="engagement-value">
+                    Part-time embedded executive (for example 1–2 days per week),
+                    remote-first with optional on-site working sessions.
+                </div>
+            </div>
+
+            <!-- Box 3 -->
             <div class="engagement-card card">
                 <i class="fa-solid fa-users engagement-icon"></i>
                 <div class="engagement-label">Your Team’s Involvement</div>
                 <div class="engagement-value">
-                    <ul>
-                        <li>Executive stakeholder interviews and design validation</li>
-                        <li>Active participation in strategy development and decision-making</li>
-                        <li>Execution of processes and playbooks (fractional leader owns strategy; team owns execution)
-                        </li>
-                        <li>Hiring participation (fractional leader defines criteria and conducts interviews)</li>
-                        <li>Training and onboarding on new processes and systems</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Deliverable Format Card -->
-            <div class="engagement-card card">
-                <i class="fa-solid fa-folder-open engagement-icon"></i>
-                <div class="engagement-label">Deliverable Format</div>
-                <div class="engagement-value">
-                    <ul>
-                        <li>Strategic plan and organizational design documentation</li>
-                        <li>Operational playbooks and process documentation</li>
-                        <li>Board and executive presentation materials</li>
-                        <li>Metrics and reporting frameworks</li>
-                        <li>Team development plans and job descriptions</li>
-                        <li>Technology stack recommendations</li>
-                        <li>Succession planning guidance</li>
-                    </ul>
+                    Founder/CEO and revenue leadership alignment at the start,
+                    recurring exec check-ins, and joint working sessions with
+                    post-sale managers and ICs.
                 </div>
             </div>
 
@@ -234,16 +208,25 @@
             <i class="fa-solid fa-bullseye"></i> This Service Is Ideal For
         </h2>
 
-        <ul class="ideal-list compact">
-            @for (item of service.idealFor; track item) {
-            <li class="ideal-item">
-                <i class="fa-solid fa-check ideal-icon"></i>
-                <span>{{ item }}</span>
-            </li>
-            }
-        </ul>
+        <div class="ideal-grid">
 
+            @for (item of service.idealFor; track item.title) {
+            <div class="ideal-card card">
+
+                <h3 class="ideal-title">
+                    {{ item.title }}
+                </h3>
+
+                <p class="ideal-desc">
+                    {{ item.description }}
+                </p>
+
+            </div>
+            }
+
+        </div>
     </section>
+
 
 
 

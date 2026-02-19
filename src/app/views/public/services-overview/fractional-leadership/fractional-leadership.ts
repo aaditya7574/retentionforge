@@ -15,57 +15,55 @@ export class FractionalLeadership {
     shortDescription:
       'Embedded executive leadership for post-sale organizations — delivering accountability, strategy, and execution without the cost or risk of a full-time hire.',
 
+    supportingDescription:
+      'Short-term, high-impact leadership to stabilize, redesign, and scale Customer Success, Account Management, Support, and Professional Services.',
+
     overview: `
-Post-sale organizations require strategic executive leadership—clear vision, accountability for NRR and churn, organizational architecture, and the authority to make decisions that drive retention and expansion. Yet many SaaS companies between $5M and $50M ARR are not ready for a full-time VP of Customer Success, Chief Customer Officer, VP of Professional Services, VP of Support, or VP of Account Management.
+Post-sale organizations eventually outgrow founder-led oversight and informal structures. You start feeling it in missed renewals, stalled expansion, and rising escalations – long before you can justify or find the right full-time executive.
 
-This is where fractional leadership changes the equation.
-
-Fractional Leadership Services provides experienced, acting executive leadership for your post-sale function—whether Customer Success, Professional Services, Support, Account Management, or a combination as a Chief Customer Officer. Your fractional leader becomes an embedded member of your executive team, owning critical metrics, driving strategic initiatives, and building organizational capacity on a flexible basis.
-
-Unlike advisory services or traditional consulting, fractional leadership means real accountability. Your fractional executive owns retention targets, reports to the board, makes hiring and organizational decisions, and implements strategy—not just recommends it.    `,
+Fractional Leadership Services gives you an experienced post-sale executive who steps in part‑time to own strategy, execution, and accountability while you hire or decide on a permanent structure. Think of it as a rental CCO or VP of Customer Success who has taken SaaS companies from 5M to 150M ARR and knows what “good” looks like at each stage.`,
 
     /* ----------------------------------
      * WHAT THIS SERVICE DELIVERS
      * ---------------------------------- */
     deliverables: [
-      'Strategic post-sale vision and planning aligned with business model, growth stage, and customer lifecycle',
-      'Ownership of retention (GRR), expansion (NRR), churn, and customer satisfaction metrics with board-level reporting',
-      'Design of optimal post-sale organizational structure, roles, career paths, and implementation roadmap',
-      'Leadership of hiring, performance management, coaching, succession planning, and internal leadership development',
-      'Design and implementation of customer lifecycle, onboarding, health scoring, renewals, and expansion processes',
-      'Cross-functional alignment with Product, Sales, Finance, and Support including escalation authority',
-      'Customer Success Platform and tooling evaluation, vendor selection, and implementation oversight',
-      'Voice-of-customer systems, customer health insights, and executive-level risk escalation',
-      'Board and executive readiness including materials, KPIs, and post-sale strategy articulation'
+      'Executive ownership of post-sale strategy across Customer Success, Account Management, Support, and Professional Services.',
+      'Clear retention and expansion plan with targets for GRR, NRR, and key leading indicators.',
+      'Organizational design for post-sale teams – roles, reporting lines, handoffs, and accountability.',
+      'Operating cadence – QBR/EBR structure, forecast reviews, pipeline and risk reviews, and escalation frameworks.',
+      'Metrics and reporting – dashboards and scorecards that let leadership and the board see what is happening in the base.',
+      'Talent assessment, coaching, and hiring support for existing and future post-sale leaders.',
+      'Cross-functional alignment with Sales, Product, and Finance on coverage models, pricing, and customer experience.',
+      'Transition plan to an internal leader, so you keep the system even after the fractional engagement ends.',
     ],
 
     /* ----------------------------------
      * WHY THIS MATTERS
      * ---------------------------------- */
     whyThisMattersExtended: `
-Mid-market SaaS companies often hit a leadership gap in post-sale execution. Growth outpaces founder oversight, existing leaders lack the experience to scale, or boards demand stronger retention and expansion accountability. Fractional leadership fills this gap with experienced executive ownership—without long-term hiring risk.
+Most SaaS companies wait too long to professionalize post-sale leadership. By the time the first VP of CS or CCO is hired, churn patterns are entrenched, teams are burned out, and customers feel the chaos. Fractional leadership closes that gap without forcing a rushed executive hire.
     `,
 
     impact: [
       {
-        title: 'Too-Big-for-Founder Gap',
+        title: 'Stronger Retention and Expansion',
         description:
-          'You’ve outgrown informal founder or sales-led oversight but cannot yet justify a $220k+ full-time VP.'
+          'Board-ready plan to move from reactive churn-fighting to a clear path toward best-in-class NRR.'
       },
       {
-        title: 'Weak Incumbent Risk',
+        title: 'Faster Organizational Clarity',
         description:
-          'Existing post-sale leaders lack the strategic depth or accountability to drive retention and expansion.'
+          'Defined roles, handoffs, and coverage so your team knows who owns what – and customers stop falling through the cracks.'
       },
       {
-        title: 'High-Stakes Transitions',
+        title: 'Lower Leadership Risk',
         description:
-          'You are restructuring, integrating functions, or building expansion revenue and need experienced execution.'
+          'Time and space to hire the right full-time leader, with the strategy, org design, and metrics already in place.'
       },
       {
-        title: 'Board-Level Pressure',
+        title: 'Better Board and Investor Confidence',
         description:
-          'Your board expects executive ownership of churn, NRR, and customer health with clear reporting.'
+          'A credible operator leading the function, with a clear narrative and numbers the board can trust.'
       }
     ],
 
@@ -83,14 +81,28 @@ Mid-market SaaS companies often hit a leadership gap in post-sale execution. Gro
      * IDEAL FOR
      * ---------------------------------- */
     idealFor: [
-      'SaaS companies between $5M–$50M ARR with post-sale leadership gaps',
-      'Organizations too mature for founder-led oversight but not ready for full-time VP hiring',
-      'Companies with underperforming CS, PS, Support, or AM leadership',
-      'High-growth teams scaling 2–3× annually',
-      'Organizations preparing for fundraising, board scrutiny, or IPO readiness',
-      'Companies planning major post-sale restructuring or functional integration',
-      'Situations requiring real decision authority—not advisory consulting'
+      {
+        title: 'Growing SaaS companies between 10M and 150M ARR',
+        description:
+          'Feeling post-sale growing pains but not ready to add another full-time executive.'
+      },
+      {
+        title: 'Founders currently “playing CCO”',
+        description:
+          'Needing to hand off Customer Success and post-sale leadership to someone who has done it before.'
+      },
+      {
+        title: 'Organizations with an unexpected VP/Head departure',
+        description:
+          'At risk of losing momentum and needing a bridge while the search is underway.'
+      },
+      {
+        title: 'Companies undergoing major change',
+        description:
+          'New funding, product expansion, or GTM shift requiring experienced post-sale leadership.'
+      }
     ],
+
 
     /* ----------------------------------
      * FUNCTION-SPECIFIC FOCUS
@@ -221,7 +233,7 @@ Mid-market SaaS companies often hit a leadership gap in post-sale execution. Gro
     ctaExtended: `
 Schedule a complimentary consultation to discuss your post-sale leadership gaps and explore whether fractional leadership is the right fit.
 
-We’ll have an honest, no-pressure conversation about your current state, the gaps you’re experiencing, and the outcomes you need—no sales pitch, just strategic clarity.
+Schedule a 30‑minute conversation to discuss your post-sale challenges, where you are seeing risk in retention and expansion, and whether a fractional engagement is the right fit. You will leave with a clear view of options – whether we work together or not.
     `
   };
 

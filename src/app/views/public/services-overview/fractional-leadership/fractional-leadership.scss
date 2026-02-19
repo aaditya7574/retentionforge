@@ -72,6 +72,15 @@
     opacity: 0.95;
 }
 
+.service-hero__supporting {
+    font-size: 1.30rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    max-width: 900px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
 /* Section Spacing */
 .service-section {
     padding: 20px 0;
@@ -267,6 +276,17 @@
         font-weight: 700;
         color: var(--text-primary);
     }
+}
+
+.engagement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.engagement-card {
+    display: flex;
+    flex-direction: column;
 }
 
 .engagement-card.full-width {
@@ -482,7 +502,7 @@
     }
 
     .compact {
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)) !important;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)) !important;
     }
 
     .service-hero {
@@ -926,4 +946,120 @@
 
 .service-overview-text {
     white-space: pre-line;
+}
+
+/* GRID LAYOUT */
+
+.engagement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+    .engagement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+    .engagement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* CARD STYLE */
+
+.engagement-card {
+    padding: 28px;
+    border-radius: 12px;
+    height: 100%;
+    /* equal height */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* ICON */
+
+.engagement-icon {
+    font-size: 22px;
+    color: #E68161;
+    /* primary accent */
+}
+
+
+/* LABEL */
+
+.engagement-label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* TEXT */
+
+.engagement-value {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* GRID */
+
+.ideal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+    .ideal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+    .ideal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* CARD */
+
+.ideal-card {
+    padding: 28px;
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* TITLE */
+
+.ideal-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* DESCRIPTION */
+
+.ideal-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
 }
