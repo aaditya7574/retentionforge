@@ -82,7 +82,7 @@ Most SaaS companies wait too long to professionalize post-sale leadership. By th
      * ---------------------------------- */
     idealFor: [
       {
-        title: 'Growing SaaS companies between 10M and 150M ARR',
+        title: 'Growing early stage SaaS companies',
         description:
           'Feeling post-sale growing pains but not ready to add another full-time executive.'
       },
